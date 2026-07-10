@@ -6,13 +6,466 @@
     <title>programme</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+     <!-- bootstrap icones -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
  
+ <header>
+  <nav>
+   <!-- logo -->
+    <div>
+      <a href="index.html"  >
+        Afri Connect Summit 2026
+
+      </a>
+    </div>
+     <!-- liens de navigationv -->
+    <div>
+      <ul>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="programme.html">programme</a></li>
+        <li><a href="intervenants.html">intervenants</a></li>
+        <li><a href="contact.html">contact</a></li>
+
+      </ul>
+    </div> 
+      <!-- Dark / Light Mode -->
+    <button id="theme-toggle">
+            <i class="bi bi-moon"></i>
+    </button>
+       <!-- Menu mobile -->
+    <button class="hamburger" id="menu-toggle">
+         <i class="bi bi-list"></i>
+    </button>
+
+
     
+  </nav>
+ </header>   
+<main>
+
+<section class="hero-programme">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <nav class="breadcrumb">
+                <a href="index.html">
+                    <i class="bi bi-house-door-fill"></i>
+                    Accueil
+                </a>
+
+                <span>
+                    <i class="bi bi-chevron-right"></i>
+                </span>
+
+                <span class="active">
+                    Programme
+                </span>
+            </nav>
+
+            <h1>Programme de la conférence</h1>
+
+            <p>
+                Découvrez les conférences, ateliers et panels prévus
+                durant les trois jours de l'AfriConnect Summit 2026.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
+<section class="programme">
 
+    <div class="section-title">
+
+        <h2>Programme de la conférence</h2>
+
+        <p>
+            Consultez le planning des conférences, ateliers et panels
+            prévus durant les trois jours de l'AfriConnect Summit 2026.
+        </p>
+
+    </div>
+
+    <!-- Onglets -->
+
+    <div class="programme-tabs">
+
+        <button type="button">Jour 1</button>
+
+        <button type="button">Jour 2</button>
+
+        <button type="button">Jour 3</button>
+
+    </div>
+
+    <!--  JOUR 1  -->
+
+    <article class="programme-day">
+
+        <h3>Jour 1 - Innovation & Intelligence Artificielle</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>09:00</td>
+                    <td>Cérémonie d'ouverture</td>
+                    <td>Amadou Diop</td>
+                    <td>Salle A</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>10:30</td>
+                    <td>L'IA au service de l'Afrique</td>
+                    <td>Fatou Ndiaye</td>
+                    <td>Salle B</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>12:00</td>
+                    <td>Pause Networking</td>
+                    <td>-</td>
+                    <td>Hall</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>14:00</td>
+                    <td>Développer une startup innovante</td>
+                    <td>Jean Koffi</td>
+                    <td>Salle C</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>16:00</td>
+                    <td>Panel : L'avenir du numérique</td>
+                    <td>Amina Hassan</td>
+                    <td>Salle A</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </article>
+
+    <!-- ================= JOUR 2 ================= -->
+
+    <article class="programme-day">
+
+        <h3>Jour 2 - Data & Business</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>09:00</td>
+                    <td>Data Science & Big Data</td>
+                    <td>Moussa Fall</td>
+                    <td>Salle A</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>10:30</td>
+                    <td>Cybersécurité</td>
+                    <td>Sarah Diallo</td>
+                    <td>Salle B</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>12:00</td>
+                    <td>Déjeuner Networking</td>
+                    <td>-</td>
+                    <td>Hall</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>14:00</td>
+                    <td>Cloud Computing</td>
+                    <td>Ali Kane</td>
+                    <td>Salle C</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>16:00</td>
+                    <td>Entrepreneuriat numérique</td>
+                    <td>Mariam Sow</td>
+                    <td>Salle A</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </article>
+
+    <!--  JOUR 3 -->
+
+    <article class="programme-day">
+
+        <h3>Jour 3 - Design & Innovation</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>09:00</td>
+                    <td>UX/UI Design</td>
+                    <td>David Mensah</td>
+                    <td>Salle B</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>10:30</td>
+                    <td>Développement Web Moderne</td>
+                    <td>Fatima Traoré</td>
+                    <td>Salle A</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>12:00</td>
+                    <td>Pause Déjeuner</td>
+                    <td>-</td>
+                    <td>Hall</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>14:00</td>
+                    <td>Table ronde : L'Afrique de demain</td>
+                    <td>Panel d'experts</td>
+                    <td>Salle C</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>16:00</td>
+                    <td>Cérémonie de clôture</td>
+                    <td>Comité d'organisation</td>
+                    <td>Grande Salle</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </article>
+
+</section>   
+<section class="themes">
+
+    <div class="section-title">
+
+        <h2>Thématiques</h2>
+
+        <p>
+            Explorez les principaux domaines abordés pendant la conférence.
+        </p>
+
+    </div>
+
+    <div class="themes-grid">
+
+        <article class="theme-card">
+
+            <i class="bi bi-cpu"></i>
+
+            <h3>IA & Tech</h3>
+
+            <p>
+                Découvrez les innovations en intelligence artificielle.
+            </p>
+
+        </article>
+
+        <article class="theme-card">
+
+            <i class="bi bi-briefcase"></i>
+
+            <h3>Business</h3>
+
+            <p>
+                Développez vos compétences entrepreneuriales.
+            </p>
+
+        </article>
+
+        <article class="theme-card">
+
+            <i class="bi bi-palette"></i>
+
+            <h3>Design</h3>
+
+            <p>
+                Les meilleures pratiques UX/UI.
+            </p>
+
+        </article>
+
+        <article class="theme-card">
+
+            <i class="bi bi-bar-chart"></i>
+
+            <h3>Data</h3>
+
+            <p>
+                Exploitez la puissance de la Data Science.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 -->
+        <div class="footer-column">
+            <h3>AfriConnect Summit</h3>
+            <p>
+                La conférence tech panafricaine qui réunit développeurs,
+                entrepreneurs et investisseurs autour de l'innovation.
+            </p>
+        </div>
+
+
+        <!-- Colonne 2 -->
+        <div class="footer-column">
+            <h3>Liens utiles</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="programme.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Colonne 3 -->
+        <div class="footer-column">
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+              <a href="https://www.facebook.com/" target="_blank">
+               <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+             </a>
+
+            <a href="https://x.com/" target="_blank">
+               <i class="bi bi-twitter-x"></i>
+            </a>
+
+             <a href="https://www.instagram.com/" target="_blank">
+               <i class="bi bi-instagram"></i>
+                 </a>
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        <p>
+            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
+        </p>
+    </div>
+
+
+    <!-- Bouton retour en haut -->
+    <button id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+</footer>
+</main>
      <!--  script JavaScript -->
 <script src="js/main.js"></script>
 

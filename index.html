@@ -6,12 +6,302 @@
     <title>Acceuil</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap icones -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-  
+
+ <header>
+  <nav>
+   <!-- logo -->
+    <div>
+      <a href="index.html"  >
+        Afri Connect Summit 2026
+
+      </a>
+    </div>
+     <!-- liens de navigationv -->
+    <div>
+      <ul>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="programme.html">programme</a></li>
+        <li><a href="intervenants.html">intervenants</a></li>
+        <li><a href="contact.html">contact</a></li>
+
+      </ul>
+    </div> 
+      <!-- Dark / Light Mode -->
+    <button id="theme-toggle">
+            <i class="bi bi-moon"></i>
+    </button>
+       <!-- Menu mobile -->
+    <button class="hamburger" id="menu-toggle">
+         <i class="bi bi-list"></i>
+    </button>
+
+
     
+  </nav>
+ </header>   
+
+<main>
+ <section id="hero">
+         <h1>AfriSummitConnect,Le rendez-vous des innovateurs Africains</h1>
+
+         <div class="hero-buttons">
+            <a href="contact.html" class="btn-primary">
+             S'inscrire maintenant
+            </a>
+
+            <a href="programme.html" class="btn-secondary">
+            Découvrir le programme
+            </a>
+
+         </div>
+   <div class="countdown">
+
+    <div class="time-box">
+        <span id="days">00</span>
+        <p>Jours</p>
+    </div>
+
+    <div class="time-box">
+        <span id="hours">00</span>
+        <p>Heures</p>
+    </div>
+
+    <div class="time-box">
+        <span id="minutes">00</span>
+        <p>Minutes</p>
+    </div>
+
+    <div class="time-box">
+        <span id="seconds">00</span>
+        <p>Secondes</p>
+    </div>
+
+  </div>
+   
+</section>
 
 
+<section class="stats">
+
+    <div class="section-title">
+        <h2>Nos Chiffres Clés</h2>
+        <p>Quelques statistiques qui illustrent l'impact de l'AfriConnect Summit.</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <i class="bi bi-people-fill"></i>
+            <h3 class="counter" data-target="1200">0</h3>
+            <p>Participants</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-mic-fill"></i>
+            <h3 class="counter" data-target="48">0</h3>
+            <p>Intervenants</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-calendar-event-fill"></i>
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Jours</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-globe-africa"></i>
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Pays représentés</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="Pourquoi">
+
+    <div class="section-title">
+        <h2>Pourquoi participer ?</h2>
+        <p>Découvrez les avantages de rejoindre l'AfriConnect Summit.</p>
+    </div>
+
+    <div class="">
+
+        <div class="">
+            <i class="bi bi-lightbulb-fill"></i>
+            <h3>Apprendre</h3>
+            <p>Participez à des conférences et ateliers animés par des experts du numérique.</p>
+        </div>
+
+        <div class="">
+            <i class="bi bi-people-fill"></i>
+            <h3>Développer son réseau</h3>
+            <p>Échangez avec des développeurs, entrepreneurs et investisseurs venus de plusieurs pays.</p>
+        </div>
+
+        <div class="">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            <h3>Saisir des opportunités</h3>
+            <p>Découvrez des projets innovants et créez de nouvelles collaborations professionnelles.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="intervenant">
+
+    <div class="section-title">
+        <h2>Intervenants Vedettes</h2>
+        <p>Découvrez les experts qui partageront leur expérience lors de l'AfriConnect Summit.</p>
+    </div>
+
+    <div class="speakers-grid">
+
+        <div class="intervenant-card">
+            <img src="" alt="Dr. Amina Diallo">
+            <h3>Dr. Amina Diallo</h3>
+            <p>Experte en Intelligence Artificielle</p>
+            <span>Sénégal</span>
+        </div>
+
+        <div class="intervenant-card">
+            <img src="" alt="Kwame Mensah">
+            <h3>Kwame Mensah</h3>
+            <p>Fondateur de TechAfrica</p>
+            <span>Ghana</span>
+        </div>
+
+        <div class="intervenant-card">
+            <img src="" alt="Grace Njeri">
+            <h3>Grace Njeri</h3>
+            <p>Ingénieure Cloud</p>
+            <span>Kenya</span>
+        </div>
+
+        <div class="intervenant-card">
+            <img src="" alt="Jean-Baptiste Kouassi">
+            <h3>Jean-Baptiste Kouassi</h3>
+            <p>Investisseur en Startups</p>
+            <span>Côte d'Ivoire</span>
+        </div>
+
+    </div>
+
+    <div class="btn-container">
+        <a href="intervenants.html" class="btn">Voir tous les intervenants</a>
+    </div>
+
+</section>
+<section class="sponsors">
+
+    <div class="section-title">
+        <h2>Nos Sponsors</h2>
+        <p>Nos partenaires soutiennent l'AfriConnect Summit et contribuent à la réussite de cet événement.</p>
+    </div>
+
+    <div class="sponsors-container">
+
+        <!-- Sponsor Or -->
+        <div class="sponsor-card gold">
+            <i class="bi bi-trophy-fill"></i>
+            <h3>Sponsor Or</h3>
+            <h4>AfriTalent</h4>
+        </div>
+
+        <!-- Sponsor Argent -->
+        <div class="sponsor-card silver">
+            <i class="bi bi-credit-card-fill"></i>
+            <h3>Sponsor Argent</h3>
+            <h4>Wave</h4>
+        </div>
+
+        <!-- Sponsor Bronze -->
+        <div class="sponsor-card bronze">
+            <i class="bi bi-geo-alt-fill"></i>
+            <h3>Sponsor Bronze</h3>
+            <h4>Yango</h4>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 -->
+        <div class="footer-column">
+            <h3>AfriConnect Summit</h3>
+            <p>
+                La conférence tech panafricaine qui réunit développeurs,
+                entrepreneurs et investisseurs autour de l'innovation.
+            </p>
+        </div>
+
+
+        <!-- Colonne 2 -->
+        <div class="footer-column">
+            <h3>Liens utiles</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+
+        </div>
+
+
+        <!-- Colonne 3 -->
+        <div class="footer-column">
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+              <a href="https://www.facebook.com/" target="_blank">
+               <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+             </a>
+
+            <a href="https://x.com/" target="_blank">
+               <i class="bi bi-twitter-x"></i>
+            </a>
+
+             <a href="https://www.instagram.com/" target="_blank">
+               <i class="bi bi-instagram"></i>
+                 </a>
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        <p>
+            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
+        </p>
+    </div>
+
+
+    <!-- Bouton retour en haut -->
+    <button id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+</footer>
+</main>
 
 
      <!--  script JavaScript -->
