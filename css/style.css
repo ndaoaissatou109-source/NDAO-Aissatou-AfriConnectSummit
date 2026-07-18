@@ -1,0 +1,788 @@
+:root{
+    --bg:#f2f8f7;              /* fond clair légèrement menthe */
+    --card:#ffffff;            /* cartes blanches */
+    --primary:#0f766e;         /* vert menthe foncé */
+    --secondary:#2dd4bf;       /* vert menthe lumineux */
+    --accent:#14b8a6;          /* accent turquoise */
+    --dark-blue:#0b1f3a;       /* bleu nuit */
+    --text:#0b1f3a;            /* texte bleu nuit */
+    --muted:#64748b;           /* texte secondaire */
+    --shadow:0 15px 40px rgba(11,31,58,.15);
+}
+
+
+[data-theme="dark"]{
+    --bg:#061826;              /* bleu nuit profond */
+    --card:#0b2638;            /* cartes bleu nuit */
+    --primary:#2dd4bf;         /* vert menthe */
+    --secondary:#5eead4;       /* menthe clair */
+    --accent:#34d399;          /* vert doux */
+    --dark-blue:#020617;
+    --text:#f8fafc;            /* blanc cassé */
+    --muted:#94a3b8;
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #edfdff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:.4s;
+}
+
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    transition:.4s;
+}
+
+
+header.scrolled{
+    background:var(--card);
+    box-shadow:var(--shadow);
+}
+
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 60px;
+}
+
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    color:var(--secondary);
+}
+
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:500;
+    
+}
+
+
+.actions button{
+    border:none;
+    background:var(--primary);
+    color:white;
+    padding:10px 15px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+
+.menu{
+    display:none;
+    font-size:25px;
+}
+
+
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(7,17,31,.75),
+    rgba(7,17,31,.85)
+    ),
+
+    url("https://images.unsplash.com/photo-1540575467063-178a50c2df87")
+    center/cover;
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width: 900px;
+    animation: show 1.5s;
+    margin-top: 70px; /* Essaie entre 60px et 100px */
+}
+
+
+.hero h1{
+    font-size:clamp(30px,5vw,70px);
+    font-weight:800;
+    padding-top: 30px;
+
+    
+}
+
+
+.hero span{
+    color:var(--secondary);
+}
+
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+
+.btns{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+
+.btn{
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+.primary{
+    background:var(--secondary);
+    color:#111;
+}
+
+
+.outline{
+    border:2px solid white;
+    color:white;
+}
+
+/* SECTION */
+.stats{
+    padding: 80px 20px;
+    background: var(--bg);
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2{
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.section-title p{
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 300;
+}
+
+/* GRID */
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARTES */
+.stat-card{
+    background: var(--card);
+    padding: 20px 18px ;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .4s;
+    border: 2px solid transparent;
+}
+
+.stat-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px); /* Fait monter la carte de 8 pixels */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Rend l'ombre plus profonde et douce */
+}
+
+
+
+/* ICÔNES */
+.stat-card i{
+    font-size: 45px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+/* NOMBRE */
+.stat-card h3{
+    font-size: 45px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* TEXTE */
+.stat-card p{
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* SECTION */
+.pourquoi{
+    padding: 80px 20px;
+    background: var(--bg);
+}
+
+/* CONTENEUR FLEXBOX */
+.pourquoi-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+/* CARTES */
+.pourquoi-card{
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indique que c'est interactif */
+}
+.pourquoi-card:hover,
+.pourquoi-card:active {
+    transform: scale(1.1); /* Agrandi la carte de 10% (comme sur ton exemple) */
+    box-shadow: 0 20px 40px rgba(2, 51, 60, 0.2); /* Ajoute une ombre profonde pour l'effet de relief */
+    z-index: 10; /* Assure que la carte zoomée passe au-dessus des autres */
+}
+
+/* ICÔNES */
+.pourquoi-card i{
+    font-size: 70px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+.sponsors {
+    padding: 60px 8%;
+    background: var(--bg);
+}
+
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Style général */
+.sponsor-card {
+    background: var(--card);
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.sponsor-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.sponsor-card h3 {
+    margin-bottom: 10px;
+}
+
+.sponsor-card h4 {
+    font-size: 22px;
+}
+
+
+/* Différence de taille entre les niveaux */
+
+.gold {
+    width: 300px;
+    height: 250px;
+    border-top: 6px solid #63c3d8;
+}
+
+.silver {
+    width: 250px;
+    height: 210px;
+    border-top: 6px solid #388490;
+}
+
+.bronze {
+    width: 220px;
+    height: 180px;
+    border-top: 6px solid #06463f;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: var(--text);
+    color: white;
+    padding: 50px 8% 20px;
+}
+
+
+/* Conteneur des colonnes */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+/* Colonnes */
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+.footer-column h3 {
+    color: var(--primary-light);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+/* Petite ligne sous les titres */
+
+.footer-column h3::after {
+    content: "";
+    width: 45px;
+    height: 3px;
+    background: var(--accent);
+    display: block;
+    margin-top: 8px;
+}
+
+
+/* Texte */
+
+.footer-column p {
+    color: #d1d5db;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+
+/* Liens */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+
+.footer-column ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+
+.footer-column ul li a:hover {
+    color: var(--accent);
+    padding-left: 8px;
+}
+
+
+/* Réseaux sociaux */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 50%;
+    font-size: 1.2rem;
+
+    transition: 0.3s ease;
+}
+
+
+.social-icons a:hover {
+    background: var(--accent);
+    transform: translateY(-5px);
+}
+
+
+/* Copyright */
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.copyright p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+/* @media (max-width:768px){
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .footer-column h3::after {
+        margin: 8px auto 0;
+    }
+
+
+    .social-icons {
+        justify-content: center;
+    }
+
+} */
+
+/* css sponsor */
+
+/* Section Sponsors */
+.sponsors {
+    background: #ffffff;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.sponsors h2 {
+    font-size: 36px;
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.sponsors h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #64748b;
+    margin-bottom: 45px;
+}
+
+/* Grille des sponsors */
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 80px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Conteneur logo */
+.sponsor-item {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logos en couleur */
+.sponsor-item img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+/* Animation au survol */
+.sponsor-item img:hover {
+    transform: scale(1.08);
+}
+
+/* Sponsor principal */
+.sponsor-item.gold img {
+    max-width: 170px;
+}
+
+
+/* Tablette */
+/* @media (max-width: 768px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+} */
+
+
+/* Mobile */
+/* @media (max-width: 480px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr;
+    }
+} */
+
+
+
+/* Section intervenants */
+.intervenant {
+    background: var(--bg);
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--text);
+    font-size: 38px;
+}
+
+.section-title p {
+    color: var(--muted);
+}
+
+
+/* Bento Grid */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 25px;
+    grid-template-areas:
+        "main small1 small2"
+        "main horizontal horizontal";
+}
+
+
+/* Cartes */
+.intervenant-card {
+    background: var(--card);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.4s ease;
+}
+
+
+/* Placement des cartes */
+.intervenant-card:nth-child(1) {
+    grid-area: main;
+}
+
+.intervenant-card:nth-child(2) {
+    grid-area: small1;
+}
+
+.intervenant-card:nth-child(3) {
+    grid-area: small2;
+}
+
+/* .intervenant-card:nth-child(4) {
+    grid-area: horizontal;
+    display: flex;
+} */
+
+.intervenant-card:nth-child(4) {
+    grid-area: horizontal;
+    position: relative; /* Permet de caler le texte par rapport à la carte */
+}
+
+/* On s'occupe UNIQUEMENT des textes de cette carte */
+.intervenant-card:nth-child(4) h3,
+.intervenant-card:nth-child(4) p,
+.intervenant-card:nth-child(4) span {
+    position: absolute;
+    left: 38%; /* Place le texte juste après ton image */
+    margin: 0 !important;
+    display: block;
+}
+
+/* On les aligne les uns sous les autres verticalement */
+.intervenant-card:nth-child(4) h3 {
+    top: 40px;  /* Ajuste pour monter/descendre le Nom */
+}
+
+.intervenant-card:nth-child(4) p {
+    top: 90px;  /* Ajuste pour le Rôle */
+}
+
+.intervenant-card:nth-child(4) span {
+    top: 130px; /* Ajuste pour le Pays */
+}
+
+/* Grande carte */
+.intervenant-card:nth-child(1) img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+}
+
+
+/* Petites cartes */
+.intervenant-card:nth-child(2) img,
+.intervenant-card:nth-child(3) img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+
+/* Carte horizontale */
+.intervenant-card:nth-child(4) img {
+    width: 35%;
+    object-fit: cover;
+}
+
+
+/* Texte */
+.intervenant-card h3 {
+    color: var(--dark-blue);
+    margin: 15px 20px 5px;
+}
+
+.intervenant-card p {
+    color: var(--muted);
+    margin: 5px 20px;
+}
+
+.intervenant-card span {
+    color: var(--primary);
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+/* Hover */
+.intervenant-card:hover {
+    transform: translateY(-8px);
+}
+
+.intervenant-card img {
+    transition: 0.4s ease;
+    object-position: top center !important; /* Force l'affichage du visage */
+}
+
+.intervenant-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Bouton */
+.btn-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+
+/* Responsive */
+/*
+
+@media(max-width:600px){
+
+    .speakers-grid {
+        display: block;
+    }
+
+    .intervenant-card {
+        margin-bottom: 25px;
+    }
+
+    .intervenant-card:nth-child(4){
+        display:block;
+    }
+}
