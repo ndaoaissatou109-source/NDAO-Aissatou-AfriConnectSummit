@@ -6,10 +6,207 @@
     <title>intervenants</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
     
+ <!-- BARRE DE NAVIGATION -->
+  <header class="barre-navigation">
+    <div class="conteneur-navigation">
+      <a href="index.html" class="logo-marque"> <div class="logo">AfriConnectSummit<span>2026</span></div></a>
+      
+      <nav class="liens-menu">
+        <a href="index.html">Accueil</a>
+        <a href="programme.html" class="actuel">Programme</a>
+        <a href="intervenants.html">Intervenants</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
+      <div class="actions-navigation">
+        <button id="bouton-theme" class="bouton-theme" aria-label="Changer de thème">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="index.html#billetterie" class="bouton-pass">voir les 3 jours</a>
+      </div>
+    </div>
+  </header>
+<section id="intervenants" class="section-intervenants">
+  <div class="conteneur-intervenants">
+    
+    <div class="en-tete-intervenants">
+      <h2>Nos <span class="texte-degrade">Intervenants</span></h2>
+      <p>Des experts internationaux réunis pour partager leur vision.</p>
+    </div>
+
+    <!-- BOUTONS DE FILTRAGE DYNAMIQUE -->
+    <div class="filtres-container">
+      <button class="btn-filtre actif" data-filter="tous">Tous</button>
+      <button class="btn-filtre" data-filter="ia">IA & Tech</button>
+      <button class="btn-filtre" data-filter="business">Business</button>
+      <button class="btn-filtre" data-filter="design">Design</button>
+      <button class="btn-filtre" data-filter="data">Data</button>
+    </div>
+
+    <!-- GRILLE DE 9 INTERVENANTS -->
+    <div class="grille-intervenants">
+      
+      <!-- Speaker 1 -->
+      <article class="carte-speaker" data-category="ia">
+        <div class="speaker-photo-wrapper">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Dr. Aminata Diallo" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇸🇳 Sénégal</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Dr. Aminata Diallo</h3>
+          <p class="speaker-role">Experte IA & LLM</p>
+        </div>
+      </article>
+
+      <!-- Speaker 2 -->
+      <article class="carte-speaker" data-category="business">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Kofi Mensah" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇬🇭 Ghana</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Kofi Mensah</h3>
+          <p class="speaker-role">Fondateur Fintech Global</p>
+        </div>
+      </article>
+
+      <!-- Speaker 3 -->
+      <article class="carte-speaker" data-category="design">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Sarah Benali" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇲🇦 Maroc</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Sarah Benali</h3>
+          <p class="speaker-role">Lead Product Designer</p>
+        </div>
+      </article>
+
+      <!-- Speaker 4 -->
+      <article class="carte-speaker" data-category="data">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Fatou Ndiaye" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇸🇳 Sénégal</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Fatou Ndiaye</h3>
+          <p class="speaker-role">Chief Data Officer</p>
+        </div>
+      </article>
+
+      <!-- Speaker 5 -->
+      <article class="carte-speaker" data-category="ia">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="David Osei" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇳🇬 Nigeria</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">David Osei</h3>
+          <p class="speaker-role">Chercheur Robotics & IA</p>
+        </div>
+      </article>
+
+      <!-- Speaker 6 -->
+      <article class="carte-speaker" data-category="business">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Aïcha Traoré" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇮🇨 Côte d'Ivoire</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Aïcha Traoré</h3>
+          <p class="speaker-role">VP Strategic Growth</p>
+        </div>
+      </article>
+
+      <!-- Speaker 7 -->
+      <article class="carte-speaker" data-category="design">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Samuel Kamau" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇰🇪 Kenya</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Samuel Kamau</h3>
+          <p class="speaker-role">UX Architect</p>
+        </div>
+      </article>
+
+      <!-- Speaker 8 -->
+      <article class="carte-speaker" data-category="data">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Mariam Diop" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇲🇱 Mali</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Mariam Diop</h3>
+          <p class="speaker-role">Head of Big Data</p>
+        </div>
+      </article>
+
+      <!-- Speaker 9 -->
+      <article class="carte-speaker" data-category="ia">
+        <div class="speaker-photo-wrapper">
+          <img src="" alt="Jean-Luc Koffi" class="speaker-photo" loading="lazy">
+          <span class="speaker-pays">🇹🇬 Togo</span>
+        </div>
+        <div class="speaker-infos">
+          <h3 class="speaker-nom">Jean-Luc Koffi</h3>
+          <p class="speaker-role">Ingénieur Cloud & IA</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+ <footer class="pied-de-page">
+    <div class="conteneur-footer">
+      
+      <div class="colonne-footer">
+        <div class="logo">AfriConnectSummit<span>2026</span></div>
+        <p class="texte-propos">
+          Le rendez-vous incontournable des leaders, investisseurs et innovateurs tech pour façonner l'avenir du continent.
+        </p>
+        <div class="reseaux-sociaux">
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Navigation</h3>
+        <ul class="liens-navigation">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Contact & Lieu</h3>
+        <ul class="liste-contact">
+          <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+          <li><i class="bi bi-envelope-fill"></i> contact@africonnect.com</li>
+          <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="bas-de-page">
+      <p>© <span id="annee-courante"></span> AfriConnect Summit. Tous droits réservés.</p>
+      <!-- <button id="bouton-retour-haut" class="bouton-retour-haut" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+      </button> -->
+    </div>
+  </footer>
 
 
      <!--  script JavaScript -->

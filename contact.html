@@ -6,9 +6,235 @@
     <title>Contact</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-       
+     <header class="barre-navigation">
+    <div class="conteneur-navigation">
+      <a href="index.html" class="logo-marque"> <div class="logo">AfriConnectSummit<span>2026</span></div></a>
+      
+      <nav class="liens-menu">
+        <a href="index.html">Accueil</a>
+        <a href="programme.html" class="actuel">Programme</a>
+        <a href="intervenants.html">Intervenants</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="actions-navigation">
+        <button id="bouton-theme" class="bouton-theme" aria-label="Changer de thème">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="index.html#billetterie" class="bouton-pass">voir les 3 jours</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Section Contact / Inscription -->
+<section class="contact-section">
+  <div class="container contact-wrapper">
+    
+    <!-- Colonne Gauche : Formulaire (Plus large) -->
+    <div class="contact-form-container">
+      <h2>Formulaire d'inscription</h2>
+      <p>Remplissez ce formulaire pour valider votre participation à l'AfriConnect Summit.</p>
+
+      <form action="#" method="POST" class="contact-form">
+        
+        <div class="form-group">
+          <label for="fullname">Nom complet</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Ex: Aïssatou Ndao" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Adresse Email</label>
+            <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+221 77 000 00 00" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="participation">Type de participation</label>
+            <select id="participation" name="participation" required>
+              <option value="" disabled selected>Choisissez une option</option>
+              <option value="participant">Participant / Visiteur</option>
+              <option value="speaker">Intervenant / Speaker</option>
+              <option value="sponsor">Sponsor / Partenaire</option>
+              <option value="exposant">Exposant</option>
+              <option value="presse">Presse / Média</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Pays africain</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Sélectionnez votre pays</option>
+              <option value="senegal">Sénégal</option>
+              <option value="cote-divoire">Côte d'Ivoire</option>
+              <option value="cameroun">Cameroun</option>
+              <option value="mali">Mali</option>
+              <option value="maroc">Maroc</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="nigeria">Nigéria</option>
+              <option value="kenya">Kenya</option>
+              <option value="ghana">Ghana</option>
+              <option value="rdc">RDC (Congo)</option>
+              <option value="autre">Autre pays</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message / Motivation</label>
+          <textarea id="message" name="message" rows="5" placeholder="Expliquez brièvement votre motivation à rejoindre l'événement..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <i class="bi bi-send-fill"></i> Envoyer mon inscription
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Colonne Droite : Informations de contact avec icônes Bootstrap -->
+    <div class="contact-info-container">
+      <h3>Informations Pratiques</h3>
+      <p class="info-description">Une question sur l'événement ou besoin d'assistance pour votre inscription ?</p>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div>
+          <h4>Lieu de l'événement</h4>
+          <p>Centre International de Conférences (CICAD), Dakar, Sénégal</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-calendar-event-fill"></i>
+        </div>
+        <div>
+          <h4>Dates</h4>
+          <p>15 - 17 Novembre 2026</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <div>
+          <h4>Email Direct</h4>
+          <p>contact@africonnectsummit.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <div>
+          <h4>Téléphone / WhatsApp</h4>
+          <p>+221 33 800 00 00</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  
+  <!-- FAQ PREMIUM (CSS PUR) -->
+  <section class="section-faq">
+    <h2 class="faq-titre">Questions Fréquentes</h2>
+    <p class="faq-sous-titre">Tout ce que vous devez savoir avant de nous rejoindre.</p>
+
+    <div class="accordeon-ensemble">
+      
+      <!-- Q1 -->
+      <div class="accordeon-element">
+        <input type="checkbox" id="faq-1" class="accordeon-state">
+        <label for="faq-1" class="accordeon-entete">
+          <span>Quels sont les prérequis pour s'inscrire ?</span>
+          <span class="accordeon-icone"></span>
+        </label>
+        <div class="accordeon-corps">
+          <div class="accordeon-contenu">
+            <p>L'inscription est totalement accessible à tous. Il vous suffit de renseigner des informations exactes via notre formulaire afin que nous puissions valider votre présence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordeon-element">
+        <input type="checkbox" id="faq-2" class="accordeon-state">
+        <label for="faq-2" class="accordeon-entete">
+          <span>Puis-je modifier mon option de participation ?</span>
+          <span class="accordeon-icone"></span>
+        </label>
+        <div class="accordeon-corps">
+          <div class="accordeon-contenu">
+            <p>Absolument. Un simple courriel adressé à notre support jusqu'à 48 heures avant l'événement vous permet de changer d'option (Passage de distanciel à présentiel selon disponibilités).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordeon-element">
+        <input type="checkbox" id="faq-3" class="accordeon-state">
+        <label for="faq-3" class="accordeon-entete">
+          <span>Un certificat officiel est-il délivré ?</span>
+          <span class="accordeon-icone"></span>
+        </label>
+        <div class="accordeon-corps">
+          <div class="accordeon-contenu">
+            <p>Oui, une attestation nominative sécurisée est transmise au format PDF à l'issue de la session pour l'ensemble des participants ayant assisté au programme.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordeon-element">
+        <input type="checkbox" id="faq-4" class="accordeon-state">
+        <label for="faq-4" class="accordeon-entete">
+          <span>Comment vais-je recevoir mon accès en ligne ?</span>
+          <span class="accordeon-icone"></span>
+        </label>
+        <div class="accordeon-corps">
+          <div class="accordeon-contenu">
+            <p>Un lien d'accès personnel ainsi que les identifiants de connexion vous seront envoyés directement par e-mail 24 heures avant l'ouverture du direct.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="accordeon-element">
+        <input type="checkbox" id="faq-5" class="accordeon-state">
+        <label for="faq-5" class="accordeon-entete">
+          <span>Quels sont les frais d'inscription ?</span>
+          <span class="accordeon-icone"></span>
+        </label>
+        <div class="accordeon-corps">
+          <div class="accordeon-contenu">
+            <p>L'accès standard à la conférence est entièrement gratuit. La réservation préalable demeure néanmoins obligatoire afin de garantir la qualité des échanges.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
     
 
 

@@ -6,10 +6,341 @@
     <title>Acceuil</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
   
+<header class="hero-section">
+    <!-- Navigation -->
+    <div class="conteneur-navigation">
+      <a href="index.html" class="logo-marque">AfriConnect<span>.</span></a>
+      
+      <nav class="liens-menu">
+        <a href="index.html">Accueil</a>
+        <a href="programme.html" class="actuel">Programme</a>
+        <a href="intervenants.html">Intervenants</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="actions-navigation">
+        <button id="bouton-theme" class="bouton-theme" aria-label="Changer de thème">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="index.html#billetterie" class="bouton-pass">voir les 3 jours</a>
+      </div>
+    </div>
+
+    <!-- Contenu Principal -->
+    <div class="hero-content">
+      <span class="badge">Événement Incontournable 2026</span>
+      <h1>Rejoignez l'expérience qui redéfinit <span class="Afrique">l'Afrique Tech</span></h1>
+      <p>En présentiel ou en virtuel — nous concevons des expériences qui inspirent, connectent et créent de l'impact.</p>
+      
+      <!-- Boutons -->
+      <div class="hero-buttons">
+        <a href="#billetterie" class="btn-primary">Prendre mon Pass</a>
+        <a href="#programme" class="btn-secondary">Voir le Programme</a>
+      </div>
+
+      <!-- COMPTEUR TRANSPARENT (GLASSMORPHISM) -->
+      <div class="countdown-container">
+        <span class="countdown-title">TEMPS RESTANT :</span>
+        <div class="countdown-timer">
+          <div class="time-box">
+            <span class="number" id="days">18</span>
+            <span class="label">Jours</span>
+          </div>
+          <div class="time-box">
+            <span class="number" id="hours">04</span>
+            <span class="label">Heures</span>
+          </div>
+          <div class="time-box">
+            <span class="number" id="minutes">32</span>
+            <span class="label">Minutes</span>
+          </div>
+          <div class="time-box">
+            <span class="number" id="seconds">49</span>
+            <span class="label">Secondes</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  
+
+
+<!-- SECTION STATISTIQUES GLASSMORPHISM -->
+<section class="pro-stats-section">
+  <div class="pro-stats-panel">
     
+    <!-- Colonne 1 : Participants -->
+    <div class="pro-stat-item">
+      <i class="bi bi-people pro-stat-icon"></i>
+      <div class="pro-stat-data">
+        <span class="pro-stat-number" data-target="1200" data-prefix="+">1200</span>
+        <p class="pro-stat-label">Participants</p>
+      </div>
+    </div>
+
+    <!-- Colonne 2 : Intervenants -->
+    <div class="pro-stat-item">
+      <i class="bi bi-mic pro-stat-icon"></i>
+      <div class="pro-stat-data">
+        <span class="pro-stat-number" data-target="48">48</span>
+        <p class="pro-stat-label">Intervenants</p>
+      </div>
+    </div>
+
+    <!-- Colonne 3 : Jours -->
+    <div class="pro-stat-item">
+      <i class="bi bi-calendar4-event pro-stat-icon"></i>
+      <div class="pro-stat-data">
+        <span class="pro-stat-number" data-target="18">18</span>
+        <p class="pro-stat-label">Jours</p>
+      </div>
+    </div>
+
+    <!-- Colonne 4 : Pays -->
+    <div class="pro-stat-item">
+      <i class="bi bi-globe pro-stat-icon"></i>
+      <div class="pro-stat-data">
+        <span class="pro-stat-number" data-target="12">12</span>
+        <p class="pro-stat-label">Pays</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section-pourquoi">
+
+  <div class="en-tete-pourquoi">
+    <h2>Accélérez votre impact au sommet</h2>
+    <p>
+      Rejoignez les acteurs les plus influents de l'écosystème africain 
+      .
+    </p>
+  </div>
+
+  <div class="conteneur-pourquoi">
+
+    <div class="carte-pourquoi">
+      <div class="icone-box">
+        <i class="bi bi-people-fill"></i>
+      </div>
+      <h3>Réseautage Stratégique</h3>
+      <p>
+        Connectez-vous directement avec plus de 1 200 décideurs
+      .
+      </p>
+    </div>
+
+
+    <div class="carte-pourquoi">
+      <div class="icone-box">
+        <i class="bi bi-graph-up-arrow"></i>
+      </div>
+      <h3>Opportunités d'Investissement</h3>
+      <p>
+        Accédez à des sessions de pitchs exclusives et rencontrez
+        les  africain.
+      </p>
+    </div>
+
+
+    <div class="carte-pourquoi">
+      <div class="icone-box">
+        <i class="bi bi-award-fill"></i>
+      </div>
+      <h3>Masterclasses & Expertise</h3>
+      <p>
+        Montez en compétences grâce à 48 intervenants de haut niveau
+      .
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- SECTION INTERVENANTS VEDETTES -->
+<section class="section-intervenants">
+  
+  <div class="en-tete-intervenants">
+    
+    <h2>Nos Intervenants Vedettes</h2>
+    <p> </p>
+  </div>
+
+  <!-- GRILLE ASYMÉTRIQUE À 2 COLONNES DÉCALÉES -->
+  <div class="grille-intervenants-asymetrique">
+    
+    <!-- COLONNE GAUCHE (DÉCALÉE VERS LE BAS) -->
+    <div class="colonne-intervenants colonne-gauche">
+      
+      <!-- Carte 1 -->
+      <div class="carte-intervenant">
+        <div class="conteneur-photo">
+          <img src="images/saliou.jpeg" alt="Aline Chen">
+        </div>
+        <div class="info-intervenant">
+          <h3>Aline Chen</h3>
+          <p class="titre-intervenant">Founder, Vortex Labs</p>
+        </div>
+      </div>
+
+      <!-- Carte 2 -->
+      <div class="carte-intervenant">
+        <div class="conteneur-photo">
+          <img src="images/mr babacar.jpeg" alt="Kofi Mensah">
+        </div>
+        <div class="info-intervenant">
+          <h3>Kofi Mensah</h3>
+          <p class="titre-intervenant">CTO, AfriTech Solutions</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLONNE DROITE (COMMENCE PLUS HAUT) -->
+    <div class="colonne-intervenants colonne-droite">
+      
+      <!-- Carte 3 -->
+      <div class="carte-intervenant">
+        <div class="conteneur-photo">
+          <img src="images/Zara.jpeg" alt="Sara Bloom">
+        </div>
+        <div class="info-intervenant">
+          <h3>Sara Bloom</h3>
+          <p class="titre-intervenant">Chief Experience Officer, BrightPath</p>
+        </div>
+      </div>
+
+      <!-- Carte 4 -->
+      <div class="carte-intervenant">
+        <div class="conteneur-photo">
+          <img src="images/linael.jpeg" alt="Aïcha Koné">
+        </div>
+        <div class="info-intervenant">
+          <h3>Aïcha Koné</h3>
+          <p class="titre-intervenant">Managing Director, VC Africa</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOUTON DE REDIRECTION -->
+  <div class="action-intervenants">
+    <a href="intervenants.html" class="bouton-voir-plus">
+      Voir tous les intervenants <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+
+</section>
+<section>
+<!-- Section Sponsors / Partenaires -->
+<section class="sponsors-section">
+  <div class="container">
+    <h2>Nos Partenaires & Sponsors</h2>
+    <p class="section-subtitle">Ils nous font confiance pour illuminer l'écosystème numérique africain.</p>
+
+    <div class="sponsors-grid">
+      <!-- Ligne 1 : 3 sponsors carrés -->
+      <div class="sponsor-card">
+        <img src="images/orange.png" alt="Orange" class="sponsor-logo">
+      </div>
+      <div class="sponsor-card">
+        <img src="images/wave.png" alt="Wave" class="sponsor-logo">
+      </div>
+      <div class="sponsor-card">
+        <img src="images/sonatel.png" alt="Sonatel" class="sponsor-logo">
+      </div>
+
+      <!-- Ligne 2 : 3 sponsors carrés -->
+      <div class="sponsor-card">
+        <img src="images/ecobank.png" alt="Ecobank" class="sponsor-logo">
+      </div>
+      <div class="sponsor-card">
+        <img src="images/afritalent.png" alt="AfriTalent" class="sponsor-logo">
+      </div>
+      <div class="sponsor-card">
+        <img src="images/free.png" alt="Free" class="sponsor-logo">
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<!-- FOOTER DU SITE -->
+<footer class="pied-de-page">
+  
+  <div class="conteneur-footer">
+    
+    <!-- Colonne 1 : À Propos / Logo -->
+    <div class="colonne-footer">
+        <div class="logo">AfriConnectSummit<span>2026</span></div>
+      <p class="texte-propos">
+        Le rendez-vous incontournable des leaders, investisseurs et innovateurs tech pour façonner l'avenir du continent.
+      </p>
+      <!-- Icônes Réseaux Sociaux -->
+      <div class="reseaux-sociaux">
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Colonne 2 : Liens Rapides -->
+    <div class="colonne-footer">
+      <h3 class="titre-colonne">Navigation</h3>
+      <ul class="liens-navigation">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#section-pourquoi">Pourquoi Participer</a></li>
+        <li><a href="intervenants.html">Intervenants</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Contact & Infos -->
+    <div class="colonne-footer">
+      <h3 class="titre-colonne">Contact</h3>
+      <ul class="liste-contact">
+        <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+        <li><i class="bi bi-envelope-fill"></i> contact@africonnect.com</li>
+        <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
+      </ul>
+    </div>
+
+  </div>
+
+  
+  <div class="bas-de-page">
+    <p>© <span id="annee-courante"></span> AfriConnect Summit. Tous droits réservés.</p>
+    
+    <!-- Bouton Retour en Haut -->
+    <button id="bouton-retour-haut" class="bouton-retour-haut" aria-label="Retour en haut de la page">
+      <i class="bi bi-arrow-up"></i>
+    </button> 
+  </div>
+
+</footer>
+
+  <!-- Script pour animer le compteur si besoin -->
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>    
 
 
 

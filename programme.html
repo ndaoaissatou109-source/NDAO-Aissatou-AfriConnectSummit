@@ -6,10 +6,372 @@
     <title>programme</title>
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
  
+  <!-- BARRE DE NAVIGATION -->
+  <header class="barre-navigation">
+    <div class="conteneur-navigation">
+      <a href="index.html" class="logo-marque">AfriConnect<span>.</span></a>
+      
+      <nav class="liens-menu">
+        <a href="index.html">Accueil</a>
+        <a href="programme.html" class="actuel">Programme</a>
+        <a href="intervenants.html">Intervenants</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="actions-navigation">
+        <button id="bouton-theme" class="bouton-theme" aria-label="Changer de thème">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="index.html#billetterie" class="bouton-pass">voir les 3 jours</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO INTERNE STYLE GLOW / NEON (MAQUETTE DRIBBBLE) -->
+  <section class="hero-interne-glow">
+    <div class="conteneur-hero-glow">
+      
+      <!-- Colonne Texte (Gauche) -->
+      <div class="colonne-texte-hero">
+        
+        <!-- Fil d'Ariane en Badge -->
+        <nav class="fil-ariane-badge" aria-label="Fil d'Ariane">
+          <a href="index.html"><i class="bi bi-house-door-fill"></i> Accueil</a>
+          <i class="bi bi-chevron-right separateur"></i>
+          <span class="actuel-vert">Programme</span>
+        </nav>
+
+        <!-- Très grand titre géant -->
+        <h1 class="grand-titre-glow">
+          Explorez le <br>
+          <span class="texte-gradient-menthe">Programme Officiel</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="description-glow">
+          Live ou en présentiel — découvrez 3 jours d'expériences, de conférences et de pannels d'exception conçus pour inspirer et créer de l'impact.
+        </p>
+
+        <!-- Boutons d'action -->
+        <div class="groupe-boutons-hero">
+          <a href="#sessions" class="bouton-principal-blanc">voir les 3 jours</a>
+        
+        </div>
+
+      </div>
+
+      <!-- Colonne Aperçu / Vidéo Flottante (Droite) -->
+      <div class="colonne-apercu-hero">
+        <div class="carte-apercu-flottante">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" alt="Conférence AfriConnect">
+          <div class="bouton-lecture-overlay">
+            <i class="bi bi-play-fill"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- SECTION PLANNING DES 3 JOURS -->
+<section id="sessions" class="section-planning">
+  <div class="conteneur-planning">
     
+    <div class="en-tete-planning">
+      <h2 class="titre-planning">Planning des <span class="texte-degrade">Conférences</span></h2>
+      <p class="sous-titre-planning">Sélectionnez une journée pour explorer les sessions et interventions.</p>
+    </div>
+
+    <!-- 1. LES ONGLETS (TABS) -->
+    <div class="onglets-jours" role="tablist">
+      <button class="onglet-btn actif" data-jour="jour-1" role="tab" aria-selected="true">
+        <span class="badge-jour">Jour 1</span>
+        <span class="date-jour">15 Octobre</span>
+      </button>
+
+      <button class="onglet-btn" data-jour="jour-2" role="tab" aria-selected="false">
+        <span class="badge-jour">Jour 2</span>
+        <span class="date-jour">16 Octobre</span>
+      </button>
+
+      <button class="onglet-btn" data-jour="jour-3" role="tab" aria-selected="false">
+        <span class="badge-jour">Jour 3</span>
+        <span class="date-jour">17 Octobre</span>
+      </button>
+    </div>
+
+    <!-- 2. CONTENU DES PLANNINGS (TABLEAUX) -->
+    <div class="conteneur-tableaux">
+
+      <!-- PLANNING JOUR 1 -->
+      <div id="jour-1" class="contenu-planning actif">
+        <div class="carte-tableau">
+          <table class="tableau-planning">
+            <thead>
+              <tr>
+                <th><i class="bi bi-clock"></i> Heure</th>
+                <th><i class="bi bi-journal-text"></i> Session</th>
+                <th><i class="bi bi-person-badge"></i> Intervenant</th>
+                <th><i class="bi bi-geo-alt"></i> Salle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">08h30 - 09h30</span></td>
+                <td class="col-session"><strong>Accueil & Badges</strong><p>Enregistrement et petit-déjeuner networking</p></td>
+                <td>Équipe d'organisation</td>
+                <td><span class="badge-salle">Hall Principal</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">09h30 - 11h00</span></td>
+                <td class="col-session"><strong>Cérémonie d'Ouverture</strong><p>Keynote d'inauguration sur l'Avenir Tech Africain</p></td>
+                <td>Amina Sow</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">11h15 - 12h45</span></td>
+                <td class="col-session"><strong>Panel : Fintech & Inclusion Financière</strong><p>Stratégies pour étendre les paiements mobiles</p></td>
+                <td>Kofi Mensah, Fatou Diop</td>
+                <td><span class="badge-salle">Salle Innovation</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">14h00 - 15h30</span></td>
+                <td class="col-session"><strong>L'IA au service de la santé en Afrique</strong><p>Cas d'usage et défis éthiques du déploiement</p></td>
+                <td>Dr. Samuel Okafor</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">15h45 - 17h15</span></td>
+                <td class="col-session"><strong>Atelier : Levée de Fonds pour Startups</strong><p>Comment séduire les VC internationaux</p></td>
+                <td>Sarah Cherif (VC Partner)</td>
+                <td><span class="badge-salle">Salle Business</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PLANNING JOUR 2 -->
+      <div id="jour-2" class="contenu-planning">
+        <div class="carte-tableau">
+          <table class="tableau-planning">
+            <thead>
+              <tr>
+                <th><i class="bi bi-clock"></i> Heure</th>
+                <th><i class="bi bi-journal-text"></i> Session</th>
+                <th><i class="bi bi-person-badge"></i> Intervenant</th>
+                <th><i class="bi bi-geo-alt"></i> Salle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">09h00 - 10h30</span></td>
+                <td class="col-session"><strong>Cybersécurité & Souveraineté des Données</strong><p>Protéger les infrastructures critiques</p></td>
+                <td>Ibrahima Ndiaye</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">10h45 - 12h15</span></td>
+                <td class="col-session"><strong>AgriTech : Révolutionner l'Agriculture</strong><p>Capteurs IoT et gestion des récoltes</p></td>
+                <td>Mariam Traoré</td>
+                <td><span class="badge-salle">Salle Innovation</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">13h30 - 15h00</span></td>
+                <td class="col-session"><strong>Infrastructures Cloud & Data Centers</strong><p>Héberger les données sur le continent</p></td>
+                <td>Jean-Luc Kouassi</td>
+                <td><span class="badge-salle">Salle Tech</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">15h15 - 16h45</span></td>
+                <td class="col-session"><strong>Web3 & Blockchain : Au-delà de la spéculation</strong><p>Applications concrètes pour la traçabilité</p></td>
+                <td>Youssef Benali</td>
+                <td><span class="badge-salle">Salle Business</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">17h00 - 18h30</span></td>
+                <td class="col-session"><strong>Session de Pitches : Top 10 Startups</strong><p>Présentation devant un jury d'investisseurs</p></td>
+                <td>Jury AfriConnect</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PLANNING JOUR 3 -->
+      <div id="jour-3" class="contenu-planning">
+        <div class="carte-tableau">
+          <table class="tableau-planning">
+            <thead>
+              <tr>
+                <th><i class="bi bi-clock"></i> Heure</th>
+                <th><i class="bi bi-journal-text"></i> Session</th>
+                <th><i class="bi bi-person-badge"></i> Intervenant</th>
+                <th><i class="bi bi-geo-alt"></i> Salle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">09h30 - 11h00</span></td>
+                <td class="col-session"><strong>Smart Cities & Villes Durables</strong><p>L'urbanisme connecté de demain</p></td>
+                <td>Ndeye Diallo</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">11h15 - 12h45</span></td>
+                <td class="col-session"><strong>EdTech : Former les Talents du Futur</strong><p>Numérique et éducation de masse</p></td>
+                <td>David Osei</td>
+                <td><span class="badge-salle">Salle Innovation</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">14h00 - 15h30</span></td>
+                <td class="col-session"><strong>L'Énergie Verte pour la Tech</strong><p>Solaire et data centers éco-responsables</p></td>
+                <td>Khadija Bamba</td>
+                <td><span class="badge-salle">Salle Tech</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">15h45 - 17h00</span></td>
+                <td class="col-session"><strong>Remise des Prix & AfriConnect Awards</strong><p>Récompense des meilleures innovations 2026</p></td>
+                <td>Comité d'organisation</td>
+                <td><span class="badge-salle">Auditorium A</span></td>
+              </tr>
+              <tr>
+                <td class="col-heure"><span class="badge-heure">17h00 - 19h00</span></td>
+                <td class="col-session"><strong>Cocktail de Clôture & Networking Gala</strong><p>Soirée de réseautage exclusive VIP</p></td>
+                <td>Tous les invités</td>
+                <td><span class="badge-salle">Espace VIP / Terrasse</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION THÉMATIQUES - BENTO GRID VERRE TRANSLUCIDE -->
+<section id="thematiques" class="section-thematiques">
+  <div class="conteneur-thematiques">
+    
+    <div class="en-tete-thematiques">
+      <h2> thématiques de la<span class="texte-degrade"> conférence</span></h2>
+      <p>Une immersion ciblée au cœur des enjeux technologiques majeurs de 2026.</p>
+    </div>
+
+    <!-- GRILLE BENTO ASYMÉTRIQUE -->
+    <div class="bento-grid">
+      
+      <!-- CARTE 1 : XL STAR (Prend 2 colonnes x 2 lignes) -->
+      <div class="bento-card bento-star">
+        <div class="bento-top">
+          <span class="bento-badge">Pilier Majeur</span>
+          <span class="bento-num">01</span>
+        </div>
+        <div class="bento-center">
+          <div class="bento-icone"><i class="bi bi-cpu"></i></div>
+          <h3>Intelligence Artificielle & Data</h3>
+          <p>Souveraineté des données, modèles LLM africains et intégration stratégique de l'IA dans la santé et l'agriculture.</p>
+        </div>
+      </div>
+
+      <!-- CARTE 2 : COMPACTE HAUT DROITE -->
+      <div class="bento-card bento-compact">
+        <div class="bento-top">
+          <span class="bento-num">02</span>
+          <div class="bento-icone"><i class="bi bi-bank"></i></div>
+        </div>
+        <div class="bento-bottom">
+          <h3>Fintech & Inclusion</h3>
+          <p>Paiements transfrontaliers et levées de fonds.</p>
+        </div>
+      </div>
+
+      <!-- CARTE 3 : COMPACTE BAS DROITE -->
+      <div class="bento-card bento-compact">
+        <div class="bento-top">
+          <span class="bento-num">03</span>
+          <div class="bento-icone"><i class="bi bi-shield-lock"></i></div>
+        </div>
+        <div class="bento-bottom">
+          <h3>Cybersécurité</h3>
+          <p>Protection des data centers et cloud souverain.</p>
+        </div>
+      </div>
+
+      <!-- CARTE 4 : HORIZON LARGE (Toute la largeur - 3 colonnes) -->
+      <div class="bento-card bento-horizon">
+        <div class="bento-top">
+          <span class="bento-badge">Impact & Durabilité</span>
+          <span class="bento-num">04</span>
+        </div>
+        <div class="bento-horizon-content">
+          <div class="bento-icone"><i class="bi bi-tree"></i></div>
+          <div>
+            <h3>Green Tech & Villes Intelligentes</h3>
+            <p>Énergies renouvelables pour infrastructures Tech, mobilité urbaine connectée et transition écologique.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <!-- FOOTER -->
+  <footer class="pied-de-page">
+    <div class="conteneur-footer">
+      
+      <div class="colonne-footer">
+        <div class="logo">AfriConnectSummit<span>2026</span></div>
+        <p class="texte-propos">
+          Le rendez-vous incontournable des leaders, investisseurs et innovateurs tech pour façonner l'avenir du continent.
+        </p>
+        <div class="reseaux-sociaux">
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Navigation</h3>
+        <ul class="liens-navigation">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Contact & Lieu</h3>
+        <ul class="liste-contact">
+          <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+          <li><i class="bi bi-envelope-fill"></i> contact@africonnect.com</li>
+          <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="bas-de-page">
+      <p>© <span id="annee-courante"></span> AfriConnect Summit. Tous droits réservés.</p>
+      <!-- <button id="bouton-retour-haut" class="bouton-retour-haut" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+      </button> -->
+    </div>
+  </footer>   
 
 
 
