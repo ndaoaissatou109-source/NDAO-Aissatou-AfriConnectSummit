@@ -1,0 +1,1971 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0b0f12;
+  color: #ffffff;
+}
+
+/* =========================================================
+   ACCUEIL - DÉGRADÉ VERT MENTHE
+   ========================================================= */
+.hero-section {
+  min-height: 90vh;
+  width: 100%;
+  
+  /* Dégradé vert menthe radial vers le bas à droite */
+  background: radial-gradient(
+    circle at 85% 85%, 
+    #257f77 0%,        /* Vert menthe vif */
+    #248c99 30%,       /* Vert profond */
+    #013937 60%,       /* Vert très sombre */
+    #090d10 100%       /* Noir de fond */
+  );
+  
+  display: flex;
+  flex-direction: column;
+  padding: 20px 8%;
+  position: relative;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #4aded7;
+}
+.Afrique {
+  color: #45d0cb;
+}
+
+/* .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+} */
+
+/* --- CONTENU --- */
+.hero-content {
+  max-width: 750px;
+  margin: auto 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* --- BOUTONS --- */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px; /* Espace avant le compteur */
+}
+
+.btn-secondary {
+  background-color:  #4bd5ce  ;
+  color: #000000;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+
+
+.btn-secondary {
+  background:  #1db7af ;
+  color: #cee6e4;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================================
+   COMPTEUR TRANSPARENT (EFFECT GLASS) */
+.countdown-container {
+  flex: 0 0 420px; /* Largeur agrandie calée à droite */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px); /* Effet de verre */
+  border-radius: 24px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.countdown-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2dd4bf; /* Couleur menthe/turquoise de ton site */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Style des icônes au-dessus */
+.timer-icon {
+  font-size: 1.3rem;
+  color: #2dd4bf;
+  margin-bottom: 8px;
+}
+
+/* Chiffres agrandis */
+.time-box .number {
+  font-size: 2.6rem; /* Chiffres gros et très lisibles */
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.time-box .label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------
+   RESPONSIVE (Passage l'un sous l'autre sur mobile)
+   ------------------------------------------ */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .countdown-container {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+:root {
+    --bg: #f5fffd;              /* fond clair légèrement menthe */
+    --card: #ffffff;            /* cartes blanches */
+    --primary: #0f766e;         /* vert menthe foncé */
+    --secondary: #2dd4bf;       /* vert menthe lumineux */
+    --accent: #14b8a6;          /* accent turquoise */
+    --dark-blue: #0b1f3a;       /* bleu nuit */
+    --text: #0b1f3a;            /* texte bleu nuit */
+    --muted: #64748b;           /* texte secondaire */
+    --shadow: 0 15px 40px rgba(11,31,58,.15);
+
+    /* Contour aqua adapté aux fonds clairs */
+    --aqua-glow: #0d9488;       
+}
+
+/* --- SECTION STATISTIQUES PRO --- */
+.pro-stats-section {
+    padding: 100px 8%;
+    background-color: var(--bg); /* Utilise maintenant le fond du root */
+    display: flex;
+    justify-content: center;
+}
+
+/* LE PANNEAU PRINCIPAL EN GLASSMORPHISM (ADAPTÉ AU FOND CLAIR) */
+.pro-stats-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    
+    /* Fond blanc translucide adapté au fond clair */
+    background: #f5fffd ;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    
+    /* Contour turquoise et ombre douce */
+    border: 1px solid var(--accent);
+    box-shadow: var(--shadow);
+    
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* STYLE DE CHAQUE ÉLÉMENT STATISTIQUE */
+.pro-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    text-align: center;
+    border-right: 1px solid rgba(15, 118, 110, 0.1); /* Séparation fine vert menthe */
+    transition: background 0.3s ease;
+}
+
+.pro-stat-item:last-child {
+    border-right: none;
+}
+
+.pro-stat-item:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* STYLE DES ICÔNES BOOTSTRAP */
+.pro-stat-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+  
+}
+
+/* STYLE DES DONNÉES CHIFFRÉES */
+.pro-stat-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Le chiffre animé (en bleu nuit / vert foncé pour la lisibilité) */
+.pro-stat-number {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text); /* Texte foncé lisible sur fond clair */
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* Le libellé du texte */
+.pro-stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted); /* Couleur secondaire du root */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .pro-stats-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pro-stat-item:nth-child(2) {
+        border-right: none;
+    }
+    .pro-stat-item:nth-child(1), .pro-stat-item:nth-child(2) {
+        border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+    }
+}
+
+@media (max-width: 576px) {
+    .pro-stats-panel {
+        grid-template-columns: 1fr;
+    }
+    .pro-stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+    }
+    .pro-stat-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Style de l'icône Bootstrap avec le cercle et l'ombre générés en CSS */
+.pro-stat-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 70px;                       /* Largeur du cercle */
+    height: 70px;                      /* Hauteur du cercle */
+    border-radius: 50%;                /* Cercle parfait */
+    
+    /* Fond menthe translucide + Ombre portée comme sur l'image */
+    background: rgba(20, 184, 166, 0.12);
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+    
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol de la carte */
+.pro-stat-item:hover .pro-stat-icon {
+    background: rgba(45, 212, 191, 0.25);
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(15, 118, 110, 0.28);
+}
+
+
+/* ==========================================
+   SECTION POURQUOI PARTICIPER (AVEC GRAND TITRE)
+   ========================================== */
+
+.section-pourquoi {
+  padding: 80px 20px;
+  background-color:var(--bg);
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Grand Titre Imposant */
+.en-tete-pourquoi h2,
+.en-tete-pourquoi h1 {
+  font-size: 3.2rem; /* Titre beaucoup plus gros */
+  color: #0f172a;
+  font-weight: 900; /* Très gras */
+  letter-spacing: -1px; /* Effet moderne tassé */
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.en-tete-pourquoi p {
+  color: #64748b;
+  font-size: 1.15rem;
+  margin-bottom: 55px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Conteneur Flexbox */
+.conteneur-pourquoi {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cartes */
+.carte-pourquoi {
+  flex: 1;
+  background: var(--bg);
+  border-radius: 24px;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-pourquoi:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Icônes */
+.icone-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.carte-pourquoi:hover .icone-box {
+  transform: scale(1.08);
+}
+
+/* ------------------------------------------
+   DÉGRADÉS + OMBRES COLORÉES POP (GLOW EFFECT)
+   ------------------------------------------ */
+
+/* Carte 1 : Vert / Turquoise (avec ombre verte vive) */
+.carte-pourquoi:nth-child(1) .icone-box {
+  background: linear-gradient(135deg, #2dd4bf, #0d9488);
+  box-shadow: 0 12px 25px rgba(13, 148, 136, 0.45);
+}
+
+/* Carte 2 : Orange / Jaune (avec ombre orange vive) */
+.carte-pourquoi:nth-child(2) .icone-box {
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.45);
+}
+
+/* Carte 3 : Violet (avec ombre violette vive) */
+.carte-pourquoi:nth-child(3) .icone-box {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+  box-shadow: 0 12px 25px rgba(147, 51, 234, 0.45);
+}
+
+/* Textes */
+.carte-pourquoi h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.carte-pourquoi p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Adaptabilité mobile */
+@media (max-width: 900px) {
+  .en-tete-pourquoi h2,
+  .en-tete-pourquoi h1 {
+    font-size: 2.2rem; /* Réduit un peu le titre sur écran mobile */
+  }
+
+  .conteneur-pourquoi {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+
+
+/* SECTION GLOBALE */
+.section-intervenants {
+    padding: 100px 8%;
+    background-color: var(--bg); /* Utilise ton fond de root clair */
+}
+
+/* EN-TÊTE */
+.en-tete-intervenants {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge-intervenants {
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--primary);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.en-tete-intervenants h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+/* STRUCTURATION DE LA GRILLE DÉCALÉE (MASONRY 2 COLONNES) */
+.grille-intervenants-asymetrique {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.colonne-intervenants {
+    display: flex;
+    flex-direction: column;
+    gap: 55px; /* Espacement vertical entre 2 cartes d'une même colonne */
+}
+
+/* LE DÉCALAGE DE LA COLONNE GAUCHE (COMME SUR DRIBBBLE) */
+.colonne-gauche {
+    margin-top: 70px; /* C'est ce margin qui crée l'effet décalé vers le bas ! */
+}
+
+/* STRUCTURE D'UNE CARTE INTERVENANT */
+.carte-intervenant {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carte-intervenant:hover {
+    transform: translateY(-8px);
+}
+
+/* LA PHOTO DE PROFIL GRAND FORMAT AVEC BORDS TRÈS ARRONDIS */
+.conteneur-photo {
+    width: 100%;
+    height: 420px;
+    border-radius: 28px; /* Style ultra moderne Dribbble */
+    overflow: hidden;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(15, 118, 110, 0.1);
+    background-color: var(--card);
+}
+
+.conteneur-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.carte-intervenant:hover .conteneur-photo img {
+    transform: scale(1.05); /* Zoom doux au survol */
+}
+
+/* TEXTES EN DESSOUS DE LA PHOTO */
+.info-intervenant {
+    padding-left: 6px;
+}
+
+.info-intervenant h3 {
+    font-size: 1.45rem;
+    color: var(--text);
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+.carte-intervenant:hover .info-intervenant h3 {
+    color: var(--primary);
+}
+
+.titre-intervenant {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* BOUTON DE REDIRECTION */
+.action-intervenants {
+    text-align: center;
+}
+
+.bouton-voir-plus {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.25);
+    transition: all 0.3s ease;
+}
+
+.bouton-voir-plus:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(11, 31, 58, 0.3);
+}
+
+.bouton-voir-plus i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.bouton-voir-plus:hover i {
+    transform: translateX(6px);
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 768px) {
+    .grille-intervenants-asymetrique {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .colonne-gauche {
+        margin-top: 0; /* Alignement standard sur mobile */
+    }
+    
+    .conteneur-photo {
+        height: 360px;
+    }
+}
+
+:root {
+    --bg: #f5fffd;              /* fond clair */
+    --card: #ffffff;            
+    --primary: #0f766e;         /* vert menthe foncé */
+    --secondary: #2dd4bf;       
+    --accent: #14b8a6;          /* accent turquoise */
+    --dark-blue: #0b1f3a;       /* bleu nuit */
+    --text: #0b1f3a;            
+    --muted: #64748b;           
+    --shadow: 0 15px 40px rgba(11,31,58,.15);
+    --aqua-glow: #0d9488;       
+}
+
+/* FOOTER GLOBAL (FOND SOMBRE BLEU NUIT POUR UN BEAU CONTRASTE EN BAS) */
+.pied-de-page {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    padding: 80px 8% 30px 8%;
+    position: relative;
+}
+
+/* CONTENEUR EN 3 COLONNES FLEXBOX */
+.conteneur-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CHAQUE COLONNE */
+.colonne-footer {
+    flex: 1 1 280px; /* S'adapte proprement sur tous les écrans */
+}
+
+/* TITRES DE COLONNES */
+.titre-colonne {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.titre-colonne span {
+    color: var(--accent); /* Point vert sur le nom de marque */
+}
+
+.texte-propos {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* RÉSEAUX SOCIAUX */
+.reseaux-sociaux {
+    display: flex;
+    gap: 12px;
+}
+
+.reseaux-sociaux a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.reseaux-sociaux a:hover {
+    background: var(--accent);
+    color: var(--dark-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(20, 184, 166, 0.35);
+}
+
+/* LIENS NAVIGATION (COLONNE 2) */
+.liens-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liens-navigation li {
+    margin-bottom: 12px;
+}
+
+.liens-navigation a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.liens-navigation a:hover {
+    color: var(--accent);
+    transform: translateX(5px); /* Décalage fluide au survol */
+}
+
+/* INFORMATIONS DE CONTACT (COLONNE 3) */
+.liste-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liste-contact li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.liste-contact i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.bas-de-page {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* 3 colonnes flexibles */
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.bas-de-page p {
+    grid-column: 2; /* Place le texte dans la colonne du milieu */
+    text-align: center;
+    margin: 0;
+}
+
+.bouton-retour-haut {
+    grid-column: 3; /* Place le bouton dans la colonne de droite */
+    justify-self: end; /* Aligne le bouton tout à droite */
+}
+
+/* BOUTON RETOUR EN HAUT */
+.bouton-retour-haut {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.bouton-retour-haut:hover {
+    background-color: var(--accent);
+    color: var(--dark-blue);
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 768px) {
+    .conteneur-footer {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .bas-de-page {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* NAVBAR SOMBRE TRANSPARENTE SUR LE HERO */
+.barre-navigation {
+    width: 100%;
+    padding: 20px 8%;
+    background: rgba(7, 21, 39, 0.85);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.15);
+}
+
+.conteneur-navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-marque {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-marque span {
+    color: var(--secondary);
+}
+
+.liens-menu {
+    display: flex;
+    gap: 30px;
+}
+/* 
+.liens-menu a {
+    text-decoration: none;
+    color: rgba(230, 244, 244, 0.75);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.liens-menu a:hover, .liens-menu a.actuel {
+    color: var(--secondary);
+}
+
+.actions-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} */
+.liens-menu a {
+    text-decoration: none;
+    color: rgba(230, 244, 244, 0.75);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;     /* Pour placer le trait */
+    padding-bottom: 6px;    /* Espace entre le texte et le trait */
+}
+
+.liens-menu a:hover, .liens-menu a.actuel {
+    color: var(--secondary);
+}
+
+/* Le trait sous le lien actif */
+.liens-menu a.actuel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary); /* Utilise ta couleur secondaire */
+    border-radius: 2px;
+}
+
+.actions-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.bouton-theme {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.bouton-theme:hover {
+    background: var(--secondary);
+    color: var(--dark-blue);
+}
+
+.bouton-pass {
+    background: var(--secondary);
+    color: var(--dark-blue);
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.bouton-pass:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* SECTION HERO GLOW (COPIE EXACTE DU STYLE DRIBBBLE AVEC ROOT) */
+
+.hero-interne-glow {
+    width: 100%;
+    padding: 160px 8% 100px 8%;
+    position: relative;
+    overflow: hidden;
+    
+    /* LE FOND SOMBRE AU CENTRE AVEC LE NÉON/GLOW LUMINEUX INTENSE SUR LES BORDS */
+    background: 
+        radial-gradient(circle at 100% 50%, rgba(45, 212, 191, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 0% 100%, rgba(15, 118, 110, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(13, 148, 136, 0.35) 0%, transparent 40%),
+        #050e1a; /* Fond bleu très sombre / noir */
+    
+    color: #ffffff;
+}
+
+.conteneur-hero-glow {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* FIL D'ARIANE BADGE */
+.fil-ariane-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.fil-ariane-badge a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.fil-ariane-badge a:hover {
+    color: #ffffff;
+}
+
+.fil-ariane-badge .separateur {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.fil-ariane-badge .actuel-vert {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+/* GRAND TITRE GÉANT DU HERO */
+.grand-titre-glow {
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* TEXTE DÉGRADÉ MENTHE/TURQUOISE VIBRANT */
+.texte-gradient-menthe {
+    background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description-glow {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 35px;
+}
+
+/* GROUPE DE BOUTONS */
+.groupe-boutons-hero {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bouton-principal-blanc {
+    background-color: #ffffff;
+    color: var(--dark-blue);
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bouton-principal-blanc:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.bouton-secondaire-transparent {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.bouton-secondaire-transparent:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* COLONNE DROITE : APERÇU / CARTE VIDÉO FLOTTANTE */
+.carte-apercu-flottante {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.carte-apercu-flottante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bouton-lecture-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background: var(--secondary);
+    color: var(--dark-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.6);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carte-apercu-flottante:hover .bouton-lecture-overlay {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* FOOTER */
+.pied-de-page {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    padding: 80px 8% 30px 8%;
+}
+
+.conteneur-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.colonne-footer {
+    flex: 1 1 280px;
+}
+
+.titre-colonne {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.titre-colonne span {
+    color: var(--secondary);
+}
+
+.texte-propos {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.reseaux-sociaux {
+    display: flex;
+    gap: 12px;
+}
+
+.reseaux-sociaux a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.reseaux-sociaux a:hover {
+    background: var(--secondary);
+    color: var(--dark-blue);
+    transform: translateY(-4px);
+}
+
+.liens-navigation, .liste-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.liens-navigation li, .liste-contact li {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.liens-navigation a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.liens-navigation a:hover {
+    color: var(--secondary);
+}
+
+.liste-contact i {
+    color: var(--secondary);
+    margin-right: 10px;
+}
+
+.bas-de-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.bouton-retour-haut {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.bouton-retour-haut:hover {
+    background-color: var(--secondary);
+    color: var(--dark-blue);
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 992px) {
+    .conteneur-hero-glow {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .colonne-texte-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grand-titre-glow {
+        font-size: 2.8rem;
+    }
+    .liens-menu {
+        display: none;
+    }
+} 
+
+
+
+/* SECTION PLANNING */
+.section-planning {
+    padding: 90px 8%;
+    background-color: var(--bg);
+}
+
+.conteneur-planning {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.en-tete-planning {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titre-planning {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.sous-titre-planning {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* ONGLETS (TABS) */
+.onglets-jours {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.onglet-btn {
+    background: var(--card);
+    border: 2px solid rgba(15, 118, 110, 0.1);
+    padding: 14px 28px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(11, 31, 58, 0.04);
+}
+
+.onglet-btn .badge-jour {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.onglet-btn .date-jour {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.onglet-btn:hover {
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* STYLE DE L'ONGLET ACTIF */
+.onglet-btn.actif {
+    background: var(--dark-blue);
+    border-color: var(--secondary);
+    box-shadow: 0 8px 25px rgba(11, 31, 58, 0.25);
+}
+
+.onglet-btn.actif .badge-jour {
+    color: var(--secondary);
+}
+
+.onglet-btn.actif .date-jour {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* GESTION DE L'AFFICHAGE DES PANELS */
+.contenu-planning {
+    display: none; /* Crayonné invisible par défaut */
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.contenu-planning.actif {
+    display: block; /* Visible quand actif */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DESIGN DU TABLEAU */
+.carte-tableau {
+    background: var(--card);
+    border-radius: 20px;
+    overflow-x: auto; /* Permet le scroll horizontal sur mobile */
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(15, 118, 110, 0.08);
+}
+
+.tableau-planning {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 650px; /* Sécurité mobile */
+}
+
+.tableau-planning thead tr {
+    background: var(--dark-blue);
+    color: #ffffff;
+}
+
+.tableau-planning th {
+    padding: 18px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.tableau-planning th i {
+    color: var(--secondary);
+    margin-right: 6px;
+}
+
+.tableau-planning td {
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(15, 118, 110, 0.06);
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+/* ALTERNANCE DES COULEURS DES LIGNES (STRIPED) */
+.tableau-planning tbody tr:nth-child(even) {
+    background-color: rgba(45, 212, 191, 0.03); /* Légère teinte menthe */
+}
+
+.tableau-planning tbody tr:hover {
+    background-color: rgba(45, 212, 191, 0.08); /* Effet survol */
+}
+
+.col-session strong {
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+.col-session p {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* BADGES DANS LE TABLEAU */
+.badge-heure {
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.badge-salle {
+    background: rgba(11, 31, 58, 0.06);
+    color: var(--dark-blue);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   SECTION THÉMATIQUES - BENTO GRID EFFET VERRE TRANSLUCIDE
+   ========================================================== */
+
+.section-thematiques {
+    padding: 100px 8%;
+    background-color: var(--bg);
+    position: relative;
+    /* Halos de lumière néon flous en arrière-plan pour faire ressortir l'effet verre */
+    background-image: 
+        radial-gradient(circle at 15% 20%, rgba(45, 212, 191, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(15, 118, 110, 0.12) 0%, transparent 50%);
+}
+
+.conteneur-thematiques {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.en-tete-thematiques {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.en-tete-thematiques h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+}
+
+.en-tete-thematiques p {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+/* LA GRILLE ASYMÉTRIQUE 3 COLONNES */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 22px;
+}
+
+/* CARTE DE BASE : EFFET VERRE PURE (GLASSMORPHISM) */
+.bento-card {
+    /* Fond translucide type plaque de verre */
+    background: rgba(255, 255, 255, 0.45);
+    
+    /* Flou d'arrière-plan pour l'effet verre dépoli */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Bordures avec reflets lumineux style verre biseauté */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    
+    border-radius: 28px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+    /* Ombre douce + reflet lumineux intérieur haut */
+    box-shadow: 0 15px 35px rgba(11, 31, 58, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+                
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 1. CARTE STAR (XL - 2 COLONNES x 2 LIGNES) */
+.bento-star {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(45, 212, 191, 0.15) 100%);
+    min-height: 390px;
+}
+
+.bento-star .bento-icone {
+    font-size: 2.2rem;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 20px;
+}
+
+.bento-star h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+}
+
+.bento-star p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* 2 & 3. CARTES COMPACTES (1 COLONNE CHAQUENE) */
+.bento-compact {
+    grid-column: span 1;
+    min-height: 185px;
+}
+
+.bento-compact h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 6px;
+}
+
+.bento-compact p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+/* 4. CARTE HORIZON (TOUTE LA LARGEUR - 3 COLONNES) */
+.bento-horizon {
+    grid-column: span 3;
+}
+
+.bento-horizon-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.bento-horizon h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 4px;
+}
+
+.bento-horizon p {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+/* ÉLÉMENTS DE STRUCTURE ET D'EN-TÊTE */
+.bento-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bento-num {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: 0.7;
+}
+
+.bento-badge {
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(15, 118, 110, 0.15);
+}
+
+.bento-icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+/* EFFET HOVER (SURVOL SUR LE VERRE) */
+.bento-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.8); /* Le verre devient légèrement plus blanc */
+    border-color: var(--secondary);        /* Le contour s'illumine en menthe */
+    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.bento-card:hover .bento-icone {
+    background: var(--dark-blue);
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE MOBILE ET TABLETTE */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-star,
+    .bento-compact,
+    .bento-horizon {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        min-height: auto;
+    }
+    .bento-horizon-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* SECTION INTERVENANTS */
+.section-intervenants {
+    padding: 90px 8%;
+    background-color: var(--bg);
+}
+
+.conteneur-intervenants {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.en-tete-intervenants {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.en-tete-intervenants h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.en-tete-intervenants p {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+/* 1. BARRE DE FILTRES DYNAMIQUE */
+.filtres-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.btn-filtre {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(15, 118, 110, 0.15);
+    color: var(--dark-blue);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-filtre:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Bouton actif sélectionné */
+.btn-filtre.actif {
+    background: var(--dark-blue);
+    color: var(--secondary);
+    border-color: var(--dark-blue);
+    box-shadow: 0 8px 20px rgba(11, 31, 58, 0.15);
+}
+
+/* 2. GRILLE RESPONSIVE 3 / 2 / 1 COLONNES */
+.grille-intervenants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes desktop */
+    gap: 30px;
+}
+
+/* 3. STYLE CARTE "GRANDE PHOTO / PETIT TEXTE" */
+.carte-speaker {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(11, 31, 58, 0.04);
+}
+
+/* Photo grand format */
+.speaker-photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 320px; /* Grande photo mise en valeur */
+    overflow: hidden;
+}
+
+.speaker-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+/* Label pays discret sur la photo */
+.speaker-pays {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(11, 31, 58, 0.65);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Zone texte minimale et très propre */
+.speaker-infos {
+    padding: 20px 22px;
+    text-align: left;
+}
+
+.speaker-nom {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 4px;
+}
+
+.speaker-role {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* EFFETS HOVER : TRANSLATION + OMBRE + ZOOM SUR PHOTO */
+.carte-speaker:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.15);
+    border-color: var(--secondary);
+}
+
+.carte-speaker:hover .speaker-photo {
+    transform: scale(1.06); /* Zoom subtil et très chic */
+}
+
+/* ANIMATION FLUIDE DU FILTRAGE JS */
+.carte-speaker.masque {
+    display: none;
+}
+
+.carte-speaker.anime-in {
+    animation: apparition 0.4s ease forwards;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* RESPONSIVE TABLETTE ET MOBILE */
+@media (max-width: 992px) {
+    .grille-intervenants {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes tablette */
+        gap: 20px;
+    }
+    .speaker-photo-wrapper {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grille-intervenants {
+        grid-template-columns: 1fr; /* 1 colonne mobile */
+    }
+    .filtres-container {
+        gap: 8px;
+    }
+    .btn-filtre {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* ==========================================
+   SECTION SPONSORS - STYLE ÉPURÉ / SANS CARTE
+   ========================================== */
+
+.sponsors-section {
+  background-color: transparent; /* Pas de fond */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.sponsors-section h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.sponsors-section .section-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+/* Alignement flex fluide pour les logos */
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 45px 60px; /* Espace vertical et horizontal entre logos */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Conteneur individuel du logo (sans cadre ni fond) */
+.sponsor-card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Taille et effets sur le logo */
+.sponsor-logo {
+  height: 49px; /* Hauteur fixe pour une harmonie parfaite */
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  /* Effet pro : légèrement grisés par défaut, colorés au survol */
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Au survol : retrouve sa couleur d'origine */
+.sponsor-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 576px) {
+  .sponsors-grid {
+    gap: 30px 40px;
+  }
+  
+  .sponsor-logo {
+    height: 32px; /* Un peu plus petit sur mobile */
+    max-width: 110px;
+  }
+}
+
+
+
+
