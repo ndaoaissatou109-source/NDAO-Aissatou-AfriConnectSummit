@@ -7,7 +7,7 @@
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -27,12 +27,56 @@
         <button id="bouton-theme" class="bouton-theme" aria-label="Changer de thème">
           <i class="bi bi-moon-fill"></i>
         </button>
-        <a href="index.html#billetterie" class="bouton-pass">voir les 3 jours</a>
+        <a href="index.html#billetterie" class="bouton-pass">voir les intervenants</a>
       </div>
     </div>
   </header>
 
+<!-- HERO INTERVENANTS (Isolé dans la classe page-intervenants) -->
+<section class="intervenants-hero">
+  <div class="intervenants-hero-container">
+    
+    <!-- Cercle dégradé vert en arrière-plan -->
+    <div class="intervenants-glow-circle"></div>
 
+    <!-- Contenu Gauche -->
+    <div class="intervenants-hero-content">
+      
+      <!-- Fil d'Ariane -->
+      <nav class="intervenants-breadcrumb">
+        <a href="index.html">Accueil</a>
+        <i class="bi bi-chevron-right"></i>
+        <span class="intervenants-breadcrumb-active">Intervenants</span>
+      </nav>
+
+      <!-- Grand Titre -->
+      <h1 class="intervenants-hero-title">
+        Nos <span class="intervenants-title-highlight">Intervenants</span>
+      </h1>
+      
+      <p class="intervenants-hero-text">
+        Découvrez les leaders, visionnaires et experts de la Tech qui partageront leurs visions et leurs expériences lors de cette édition 2026.
+      </p>
+      
+      <!-- Boutons -->
+      <div class="intervenants-hero-buttons">
+       
+        <a href="#programme" class="btn-secondary">Voir  nos intervenant</a>
+      </div>
+    </div>
+
+    <!-- Contenu Droit : Carte Image -->
+    <div class="intervenants-image-card">
+      <img src="images/interenant.jpg" alt="Speaker Keynote">
+      <div class="intervenants-card-overlay">
+        <span class="intervenants-badge">interenant</span>
+        <h3>claire mensahh</h3>
+        <p>Expert en Intelligence Artificielle</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   
 <section id="intervenants" class="section-intervenants">
@@ -118,7 +162,7 @@
       <!-- Speaker 6 -->
       <article class="carte-speaker" data-category="business">
         <div class="speaker-photo-wrapper">
-          <img src="" alt="Aïcha Traoré" class="speaker-photo" loading="lazy">
+          <img src="images/intervenant.png" alt="Aïcha Traoré" class="speaker-photo" loading="lazy">
           <span class="speaker-pays">🇮🇨 Côte d'Ivoire</span>
         </div>
         <div class="speaker-infos">
@@ -130,7 +174,7 @@
       <!-- Speaker 7 -->
       <article class="carte-speaker" data-category="design">
         <div class="speaker-photo-wrapper">
-          <img src="" alt="Samuel Kamau" class="speaker-photo" loading="lazy">
+          <img src="images/saratou.png" alt="Samuel Kamau" class="speaker-photo" loading="lazy">
           <span class="speaker-pays">🇰🇪 Kenya</span>
         </div>
         <div class="speaker-infos">
@@ -154,7 +198,7 @@
       <!-- Speaker 9 -->
       <article class="carte-speaker" data-category="ia">
         <div class="speaker-photo-wrapper">
-          <img src="" alt="Jean-Luc Koffi" class="speaker-photo" loading="lazy">
+          <img src="images/Aline.png" alt="Jean-Luc Koffi" class="speaker-photo" loading="lazy">
           <span class="speaker-pays">🇹🇬 Togo</span>
         </div>
         <div class="speaker-infos">

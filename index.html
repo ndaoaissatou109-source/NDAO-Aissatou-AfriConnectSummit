@@ -7,7 +7,7 @@
       <!-- feuille de style -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   
@@ -35,8 +35,8 @@
 
     <!-- Contenu Principal -->
     <div class="hero-content">
-       <span class="badge">Événement Incontournable 2026</span>
-      <h1>Rejoignez l'expérience qui redéfinit <span class="Afrique">l'Afrique Tech</span></h1>
+       <!-- <span class="badge">Événement Incontournable 2026</span> -->
+      <h1>l'expérience qui redéfinit <span class="Afrique">l'Afrique Tech</span></h1>
       <p>En présentiel ou en virtuel — nous concevons des expériences qui inspirent, connectent et créent de l'impact.</p>
       
       <!-- Boutons -->
@@ -289,61 +289,51 @@
   </div>
 </section>
 </section>
-<!-- FOOTER DU SITE -->
-<footer class="pied-de-page">
-  
-  <div class="conteneur-footer">
-    
-    <!-- Colonne 1 : À Propos / Logo -->
-    <div class="colonne-footer">
+<!-- FOOTER -->
+  <footer class="pied-de-page">
+    <div class="conteneur-footer">
+      
+      <div class="colonne-footer">
         <div class="logo">AfriConnectSummit<span>2026</span></div>
-      <p class="texte-propos">
-        Le rendez-vous incontournable des leaders, investisseurs et innovateurs tech pour façonner l'avenir du continent.
-      </p>
-      <!-- Icônes Réseaux Sociaux -->
-      <div class="reseaux-sociaux">
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <p class="texte-propos">
+          Le rendez-vous incontournable des leaders, investisseurs et innovateurs tech pour façonner l'avenir du continent.
+        </p>
+        <div class="reseaux-sociaux">
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
       </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Navigation</h3>
+        <ul class="liens-navigation">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="colonne-footer">
+        <h3 class="titre-colonne">Contact & Lieu</h3>
+        <ul class="liste-contact">
+          <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+          <li><i class="bi bi-envelope-fill"></i> contact@africonnect.com</li>
+          <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Colonne 2 : Liens Rapides -->
-    <div class="colonne-footer">
-      <h3 class="titre-colonne">Navigation</h3>
-      <ul class="liens-navigation">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="#section-pourquoi">Pourquoi Participer</a></li>
-        <li><a href="intervenants.html">Intervenants</a></li>
-        <li><a href="#programme">Programme</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="bas-de-page">
+      <p>© <span id="annee-courante"></span> AfriConnect Summit. Tous droits réservés.</p>
+      <!-- <button id="bouton-retour-haut" class="bouton-retour-haut" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+      </button> -->
     </div>
-
-    <!-- Colonne 3 : Contact & Infos -->
-    <div class="colonne-footer">
-      <h3 class="titre-colonne">Contact</h3>
-      <ul class="liste-contact">
-        <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
-        <li><i class="bi bi-envelope-fill"></i> contact@africonnect.com</li>
-        <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
-      </ul>
-    </div>
-
-  </div>
-
-  
-  <div class="bas-de-page">
-    <p>© <span id="annee-courante"></span> AfriConnect Summit. Tous droits réservés.</p>
-    
-    <!-- Bouton Retour en Haut -->
-    <button id="bouton-retour-haut" class="bouton-retour-haut" aria-label="Retour en haut de la page">
-      <i class="bi bi-arrow-up"></i>
-    </button> 
-  </div>
-
-</footer>
+  </footer>  
 
   <!-- Script pour animer le compteur si besoin -->
   <script src="script.js">

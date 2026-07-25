@@ -54,31 +54,13 @@ body {
   color: #45d0cb;
 }
 
-/* .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: #a0aec0;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #ffffff;
-} */
 
 /* --- CONTENU --- */
 .hero-content {
   max-width: 750px;
   margin: auto 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 55px;
+  padding-bottom: 20px;
 }
 
 .badge {
@@ -94,8 +76,9 @@ body {
 
 .hero-content h1 {
   font-size: 3.5rem;
-  line-height: 1.1;
-  font-weight: 800;
+  line-height: 1.3;
+
+  font-weight: 900;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -145,12 +128,12 @@ body {
 /* =========================================================
    COMPTEUR TRANSPARENT (EFFECT GLASS) */
 .countdown-container {
-  flex: 0 0 420px; /* Largeur agrandie calée à droite */
+  flex: 0 0 450px; /* Largeur agrandie calée à droite */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(12px); /* Effet de verre */
   border-radius: 24px;
-  padding: 35px 25px;
+  padding: 14px 25px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
@@ -161,7 +144,7 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #2dd4bf; /* Couleur menthe/turquoise de ton site */
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
@@ -181,14 +164,14 @@ body {
 
 /* Style des icônes au-dessus */
 .timer-icon {
-  font-size: 1.3rem;
-  color: #2dd4bf;
+  font-size: 1.7rem;
+  color: #060f1c;
   margin-bottom: 8px;
 }
 
 /* Chiffres agrandis */
 .time-box .number {
-  font-size: 2.6rem; /* Chiffres gros et très lisibles */
+  font-size: 2.8rem; /* Chiffres gros et très lisibles */
   font-weight: 800;
   color: #ffffff;
   line-height: 1;
@@ -1969,3 +1952,698 @@ body {
 
 
 
+/* ==========================================
+   PAGE INTERVENANTS - THEME CLAIR / BLANC & VERT
+   ========================================== */
+
+.intervenants-hero {
+  position: relative;
+  /* Fond blanc lumineux */
+  background-color: #ffffff; 
+  overflow: hidden;
+  padding: 60px 0 100px 0;
+}
+
+.intervenants-hero-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  z-index: 2;
+}
+
+/* Halos vert & menthe doux adaptés sur fond blanc */
+.intervenants-glow-circle {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.2) 0%, rgba(16, 185, 129, 0.08) 45%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.intervenants-hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* --- FIL D'ARIANE (Sur fond blanc) --- */
+.intervenants-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.intervenants-breadcrumb a {
+  color: #64748b; /* Gris sombre pour être lisible sur blanc */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.intervenants-breadcrumb a:hover {
+  color: #0f172a;
+}
+
+.intervenants-breadcrumb i {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.intervenants-breadcrumb-active {
+  color: #0d9488; /* Vert foncé/menthe lisible sur blanc */
+  font-weight: 700;
+}
+
+/* --- TITRE & TEXTE --- */
+.intervenants-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a; /* Texte principal foncé */
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.intervenants-title-highlight {
+  background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intervenants-hero-text {
+  color: #475569; /* Gris lisible */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.intervenants-hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- CARTE IMAGE À DROITE --- */
+.intervenants-image-card {
+  flex: 0 50 500px;
+  height: 500px;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.intervenants-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intervenants-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  /* Fond dégradé sombre au bas de l'image pour que le texte sur la photo reste blanc et lisible */
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 100%);
+  color: #ffffff;
+}
+
+.intervenants-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(45, 212, 191, 0.2);
+  border: 1px solid #2dd4bf;
+  color: #2dd4bf;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.intervenants-card-overlay h3 {
+  font-size: 1.4rem;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.intervenants-card-overlay p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .intervenants-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intervenants-breadcrumb, 
+  .intervenants-hero-buttons {
+    justify-content: center;
+  }
+
+  .intervenants-image-card {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    flex: none;
+  }
+}
+
+
+
+
+/* ==========================================
+   VARIABLES (BLEU NUIT & VERT MENTHE)
+   ========================================== */
+:root {
+  --bleu-nuit: #0f172a;
+  --vert-menthe: #2dd4bf;
+  --vert-hover: #0d9488;
+  --bg-gris: #f8fafc;
+  --texte-sombre: #1e293b;
+  --texte-gris: #64748b;
+  --border-light: #e2e8f0;
+}
+
+/* ==========================================
+   1. HERO / FIL D'ARIANE ET BADGE
+   ========================================== */
+.badge {
+  display: inline-block;
+  background-color: rgba(45, 212, 191, 0.15);
+  color: var(--vert-hover);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   2. CONTACT & FORMULAIRE + BLOC INFOS BLEU NUIT
+   ========================================== */
+.contact-section {
+  background-color: var(--bg-gris);
+  padding: 60px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr; /* Formulaire plus large */
+  gap: 30px;
+  align-items: start; /* Empêche le bloc de droite de s'étirer */
+}
+
+/* Formulaire (Gauche) */
+.contact-form-container {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  color: var(--bleu-nuit);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.contact-form-container p {
+  color: var(--texte-gris);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--bleu-nuit);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--vert-menthe);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--vert-hover);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-submit:hover {
+  background-color: var(--bleu-nuit);
+}
+
+/* Bloc Infos Pratiques (Droite - Bleu Nuit & Court) */
+.contact-info-container {
+  background-color: var(--bleu-nuit);
+  color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+}
+
+.contact-info-container h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+
+.info-description {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(45, 212, 191, 0.15);
+  color: var(--vert-menthe);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  font-size: 0.85rem;
+  color: var(--vert-menthe);
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* ==========================================
+   3. FAQ ACCORDÉON (CSS PUR)
+   ========================================== */
+.section-faq {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.faq-titre {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--bleu-nuit);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.faq-sous-titre {
+  text-align: center;
+  color: var(--texte-gris);
+  margin-bottom: 40px;
+}
+
+.accordeon-ensemble {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.accordeon-element {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.accordeon-element:hover {
+  border-color: var(--vert-menthe);
+}
+
+.accordeon-state {
+  display: none;
+}
+
+.accordeon-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  font-weight: 700;
+  color: var(--bleu-nuit);
+  cursor: pointer;
+}
+
+.accordeon-icone {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.accordeon-icone::before,
+.accordeon-icone::after {
+  content: '';
+  position: absolute;
+  background-color: var(--vert-hover);
+  border-radius: 2px;
+}
+
+.accordeon-icone::before {
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 2px;
+}
+
+.accordeon-icone::after {
+  top: 0;
+  left: 6px;
+  width: 2px;
+  height: 14px;
+  transition: 0.3s;
+}
+
+.accordeon-corps {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: var(--bg-gris);
+}
+
+.accordeon-contenu {
+  padding: 16px 22px 20px 22px;
+  color: var(--texte-gris);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.accordeon-state:checked ~ .accordeon-corps {
+  max-height: 250px;
+}
+
+.accordeon-state:checked + .accordeon-entete {
+  color: var(--vert-hover);
+}
+
+.accordeon-state:checked + .accordeon-entete .accordeon-icone::after {
+  opacity: 0;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 850px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   SECTION CARTE GOOGLE MAPS
+   ========================================== */
+
+.map-section {
+  padding: 40px 0;
+  background-color: #f8fafc; /* Fond clair pour s'aligner sur la section contact */
+}
+
+.map-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.google-map {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08); /* Ombre douce bleu nuit */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet discret au survol */
+.google-map:hover {
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .map-section {
+    padding: 20px 0;
+  }
+  
+  .google-map {
+    height: 280px; /* Plus compact sur petit écran */
+    border-radius: 16px;
+  }
+}
+
+
+
+/* ==========================================
+   VARIABLES DE COULEURS
+   ========================================== */
+:root {
+  --bleu-nuit: #0f172a;
+  --bleu-nuit-profond: #020617;
+  --vert-menthe: #2dd4bf;
+  --vert-hover: #0d9488;
+  --texte-gris: #94a3b8;
+  --border-light: #e2e8f0;
+}
+
+/* ==========================================
+   SECTION HERO (AVEC DÉGRADÉ PRO)
+   ========================================== */
+.contact-hero {
+  position: relative;
+  /* Dégradé moderne et élégant du Bleu Nuit vers une nuance plus profonde */
+  background: linear-gradient(135deg, var(--bleu-nuit) 0%, var(--accent) 100%);
+  padding: 80px 0 140px 0; /* Bas élargi pour superposer l'image proprement */
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Effet lumineux vert menthe très discret en arrière-plan */
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(84, 180, 167, 0.15) 0%, rgba(23, 160, 160, 0) 70%);
+  pointer-events: none;
+}
+
+.contacthero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fil d'Ariane */
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: var(--vert-menthe);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.breadcrumb-separator {
+  color: var(--texte-gris);
+  font-size: 0.75rem;
+}
+
+.current-page {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* Titre H1 */
+.contact-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+  background: linear-gradient(to right, #ffffff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sous-titre */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--texte-gris);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   GRANDE IMAGE EN DESSOU (CHEVAUCHEMENT)
+   ========================================== */
+.hero-image-wrapper {
+  position: relative;
+  margin-top: -80px; /* Fait remonter l'image sur le hero pour un effet pro */
+  z-index: 3;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.image-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border-light);
+}
+
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MOBILE & TABLETTE)
+   ========================================== */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0 100px 0;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-image-wrapper {
+    margin-top: -50px;
+  }
+
+  .hero-img {
+    height: 250px; /* Plus compact sur mobile */
+  }
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo, h1, h2, h3, nav a{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
