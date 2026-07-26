@@ -137,9 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-});
 
-/* ========================================================
+  /* ========================================================
      4. FILTRAGE DYNAMIQUE DES INTERVENANTS (SÉCURISÉ)
      ======================================================== */
   // Sélectionne tous les boutons de filtres (Tous, IA, Business, Design, Data)
@@ -183,3 +182,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
+
+
+  /* ========================================================
+     5. GESTION DU MENU BURGER MOBILE
+     ======================================================== */
+  const boutonBurger = document.getElementById("bouton-burger");
+  const liensMenu = document.getElementById("liens-menu");
+
+  if (boutonBurger && liensMenu) {
+    boutonBurger.addEventListener("click", function () {
+      boutonBurger.classList.toggle("actif");
+      liensMenu.classList.toggle("actif");
+    });
+
+    const liens = liensMenu.querySelectorAll("a");
+    liens.forEach((lien) => {
+      lien.addEventListener("click", () => {
+        boutonBurger.classList.remove("actif");
+        liensMenu.classList.remove("actif");
+      });
+    });
+  }
+
+}); 

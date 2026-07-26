@@ -2580,34 +2580,69 @@ body {
   margin: 0 auto;
 }
 
-/* ==========================================
-   GRANDE IMAGE EN DESSOU (CHEVAUCHEMENT)
-   ========================================== */
-.hero-image-wrapper {
-  position: relative;
-  margin-top: -80px; /* Fait remonter l'image sur le hero pour un effet pro */
-  z-index: 3;
-  padding: 0 20px;
-  margin-bottom: 60px;
+
+/* SUR ORDINATEUR : Le bouton burger est complètement masqué */
+.bouton-burger {
+  display: none;
 }
 
-.image-box {
-  max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 24px;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
-  border: 1px solid var(--border-light);
-}
+/* UNIQUEMENT SUR TÉLÉPHONE (767px et moins) */
+@media screen and (max-width: 767px) {
+  /* Affichage du bouton burger */
+  .bouton-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+  }
 
-.hero-img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
+  .bouton-burger .barre {
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--vert-hover); /* Garde la couleur de ton texte/thème */
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Transformation en X quand ouvert */
+  .bouton-burger.actif .barre:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  .bouton-burger.actif .barre:nth-child(2) {
+    opacity: 0;
+  }
+  .bouton-burger.actif .barre:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  /* Menu déroulant sur téléphone */
+  .liens-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 280px;
+    height: 100vh;
+    background-color: var(--bg-card, #0d1b34); /* Utilise la variable de ton fond */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    box-shadow: -5px 0 15px rgba(217, 213, 213, 0.3);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+  }
+
+  .liens-menu.actif {
+    right: 0;
+  }
 }
 
 /* ==========================================
@@ -2647,3 +2682,113 @@ p{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
+
+
+/* ========================================================
+   1. ORDINATEUR / MACHINE (Grands écrans - 1024px et plus)
+   ======================================================== */
+@media screen and (min-width: 1024px) {
+  /* Grille des intervenants : 3 colonnes */
+  .grille-intervenants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  /* Conteneur principal */
+  .conteneur-intervenants,
+  .conteneur-planning {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+
+/* ========================================================
+   2. TABLETTE (Écrans intermédiaires - entre 768px et 1023px)
+   ======================================================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Grille des intervenants : 2 colonnes */
+  .grille-intervenants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Ajustement des marges et sections */
+  .section-intervenants,
+  .section-planning {
+    padding: 60px 5%;
+  }
+
+  /* Filtres et onglets avec espacement moyen */
+  .filtres-container,
+  .onglets-jours {
+    gap: 10px;
+  }
+
+  .btn-filtre,
+  .onglet-btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ========================================================
+   3. TÉLÉPHONE / MOBILE (Petits écrans - 767px et moins)
+   ======================================================== */
+@media screen and (max-width: 767px) {
+  /* Réduction des espaces de sections */
+  .section-intervenants,
+  .section-planning {
+    padding: 40px 15px;
+  }
+
+  /* Titres plus petits pour mobile */
+  .en-tete-intervenants h2,
+  .titre-planning {
+    font-size: 1.8rem;
+  }
+
+  /* Grille des intervenants : 1 seule colonne */
+  .grille-intervenants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Filtres & Onglets : Scroll horizontal si ça déborde */
+  .filtres-container,
+  .onglets-jours {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-filtre,
+  .onglet-btn {
+    flex: 0 0 auto; /* Empêche les boutons de se déformer */
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Adaptabilité des tableaux sur mobile */
+  .carte-tableau {
+    overflow-x: auto; /* Permet de scroller le tableau horizontalement */
+    border-radius: 12px;
+  }
+
+  .tableau-planning th,
+  .tableau-planning td {
+    padding: 12px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+
+
