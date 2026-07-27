@@ -2791,4 +2791,271 @@ p{
 }
 
 
+/* =========================================================
+   1. THÈME CLAIR (TES VARIABLES PAR DÉFAUT)
+   ========================================================= */
+:root {
+    --bg: #f5fffd;              /* Fond clair légèrement menthe */
+    --card: #ffffff;            /* Cartes blanches */
+    --card-border: rgba(15, 118, 110, 0.12);
+    --primary: #0f766e;         /* Vert menthe foncé */
+    --secondary: #2dd4bf;       /* Vert menthe lumineux */
+    --accent: #14b8a6;          /* Accent turquoise */
+    --dark-blue: #0b1f3a;       /* Bleu nuit */
+    --text: #0b1f3a;            /* Texte bleu nuit */
+    --muted: #64748b;           /* Texte secondaire */
+    --shadow: 0 15px 40px rgba(11,31,58,.15);
+    --aqua-glow: #0d9488;       /* Contour aqua */
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+}
 
+/* Base Light Mode */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Span en vert menthe par défaut */
+span {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   2. MODE SOMBRE (QUAND ON APPUIE SUR LA LUNE)
+   ========================================================= */
+body.dark-mode {
+    --bg: #050c18 !important;              /* Fond Bleu Nuit Très Sombre */
+    --card: #0b1728 !important;            /* Cartes bleu nuit */
+    --card-hover: #13243d !important;      /* Hover cartes */
+    --card-border: rgba(45, 212, 191, 0.2) !important;
+    --text: #ffffff !important;            /* Textes en blanc */
+    --muted: #cbd5e1 !important;           /* Textes secondaires */
+    --input-bg: #030810 !important;
+    --input-border: #1e293b !important;
+}
+
+/* Body global & sections principales */
+body.dark-mode,
+body.dark-mode main,
+body.dark-mode section {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+/* Titres (h1 -> h6) et Paragraphes en BLANC */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode td,
+body.dark-mode th {
+    color: #ffffff !important;
+}
+
+/* SPAN en VERT MENTHE LUMINEUX */
+body.dark-mode span {
+    color: var(--secondary) !important; /* #2dd4bf */
+}
+
+/* BOUTONS en VERT MENTHE */
+body.dark-mode .btn-secondary,
+body.dark-mode .bouton-pass,
+body.dark-mode .bouton-voir-plus,
+body.dark-mode button[type="submit"] {
+    background-color: var(--secondary) !important;
+    color: #050c18 !important;
+    border: none !important;
+}
+
+/* --- CORRECTION DES CARTES (INTERVENANTS, POURQUOI, TABLEAU) --- */
+body.dark-mode .carte-pourquoi,
+body.dark-mode .carte-intervenant,
+body.dark-mode .carte-tableau,
+body.dark-mode .pro-stats-panel,
+body.dark-mode .pro-stat-item,
+body.dark-mode .contact-form-container,
+body.dark-mode .onglet-btn,
+body.dark-mode .conteneur-photo,
+body.dark-mode .info-intervenant {
+    background-color: var(--card) !important;
+    border-color: var(--card-border) !important;
+}
+
+/* Correction spécifique du texte sur les cartes d'intervenants */
+body.dark-mode .carte-intervenant h3,
+body.dark-mode .carte-intervenant p,
+body.dark-mode .info-intervenant h3,
+body.dark-mode .info-intervenant p,
+body.dark-mode .titre-intervenant {
+    color: #ffffff !important;
+}
+
+/* Hover sur les cartes */
+body.dark-mode .carte-pourquoi:hover,
+body.dark-mode .carte-intervenant:hover,
+body.dark-mode .pro-stat-item:hover {
+    background-color: var(--card-hover) !important;
+}
+
+/* --- CORRECTION FORMULAIRES & PAGE CONTACT --- */
+body.dark-mode label,
+body.dark-mode .contact-form label {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* --- CORRECTION RÉSEAUX SOCIAUS & MAP --- */
+body.dark-mode .reseaux-sociaux a {
+    background-color: rgba(45, 212, 191, 0.15) !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+}
+
+body.dark-mode .reseaux-sociaux a:hover {
+    background-color: var(--secondary) !important;
+    color: #050c18 !important;
+}
+
+
+/* =========================================================
+   3. EXCEPTIONS : HERO ET FOOTER (NE CHANGENT PAS DE FOND)
+   ========================================================= */
+body.dark-mode .hero-section,
+body.dark-mode .hero-interne-glow,
+body.dark-mode .pied-de-page,
+body.dark-mode footer {
+    background: inherit;
+}
+
+/* =========================================================
+   CORRECTIFS SPÉCIFIQUES : INTERVENANTS & FAQ (DARK MODE)
+   ========================================================= */
+
+/* 1. FAQ : Fond bleu nuit + Texte blanc + Icones verts */
+/* Fond Bleu Nuit + Texte Blanc pour la FAQ */
+body.dark-mode [class*="faq"],
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-button {
+    background-color: #0b1728 !important; /* Met le fond en Bleu Nuit */
+    color: #ffffff !important;             /* Met le texte en Blanc */
+    border: 1px solid rgba(45, 212, 191, 0.2) !important;
+}
+
+body.dark-mode .faq-item h3,
+body.dark-mode .faq-item p,
+body.dark-mode .faq-question,
+body.dark-mode [class*="faq"] h3,
+body.dark-mode [class*="faq"] p,
+body.dark-mode [class*="faq"] button,
+body.dark-mode [class*="faq"] span {
+    color: #011022 !important; /* Texte blanc au lieu de vert sur blanc */
+  
+}
+/* Rend le sous-titre de la FAQ bien visible en blanc */
+body.dark-mode p,
+body.dark-mode .sous-titre,
+body.dark-mode [class*="subtitle"],
+body.dark-mode [class*="description"] {
+    color: #ffffff !important;
+}
+
+
+/* 2. BAS DE CARTE INTERVENANTS : Fond bleu nuit au lieu de gris */
+body.dark-mode .info-intervenant,
+body.dark-mode .carte-intervenant .info,
+body.dark-mode [class*="intervenant"] [class*="info"],
+body.dark-mode [class*="speaker"] [class*="info"],
+body.dark-mode [class*="carte"] > div:last-child {
+    background-color: #0b1728 !important; /* Enlève le fond gris */
+    color: #ffffff !important;
+}
+
+body.dark-mode .info-intervenant h3,
+body.dark-mode .info-intervenant p {
+    color: #ffffff !important;
+}
+
+/* 3. BOUTONS DE FILTRES (Tous, IA & Tech, Business...) */
+body.dark-mode .filtre-btn,
+body.dark-mode .btn-filtre,
+body.dark-mode [class*="filtre"],
+body.dark-mode [class*="filter"] {
+    background-color: #0b1728 !important; /* Bleu nuit au lieu de gris */
+    color: #ffffff !important;
+    border: 1px solid rgba(45, 212, 191, 0.2) !important;
+}
+
+/* Filtre actif */
+body.dark-mode .filtre-btn.actif,
+body.dark-mode .btn-filtre.active,
+body.dark-mode [class*="filtre"].active,
+body.dark-mode [class*="filtre"].actif {
+    background-color: #2dd4bf !important; /* Vert menthe pour le filtre sélectionné */
+    color: #050c18 !important;
+}
+
+/* =========================================================
+   BOUTON RETOUR EN HAUT (VERT MENTHE)
+   ========================================================= */
+.bouton-retour-haut {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #2dd4bf !important;  /* Vert menthe lumineux */
+  color: #050c18 !important;              /* Fleche sombre */
+  border: none !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(45, 212, 191, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  z-index: 1000;
+  
+  /* Invisibilité par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Apparition quand on scroll */
+.bouton-retour-haut.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Effet au survol */
+.bouton-retour-haut:hover {
+  background-color: #14b8a6 !important;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.6);
+}
+.bouton-retour-haut i {
+  /* Ajoute un trait de contour pour durcir la flèche */
+  -webkit-text-stroke: 1.5px #050c18; 
+  font-weight: 900 !important;
+}

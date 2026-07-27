@@ -206,3 +206,114 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 }); 
+
+/* ========================================================
+     6. VALIDATION DU FORMULAIRE SANS RECHARGEMENT (AJAX)
+     ======================================================== */
+  // Sélection du formulaire et du conteneur de message
+  const contactForm = document.querySelector(".contact-form");
+  const formMessage = document.getElementById("form-message");
+
+  // Sécurité : s'assure que le formulaire existe bien sur la page actuelle (ex: contact.html)
+  if (contactForm) {
+    
+    // Écoute l'événement de soumission ("submit") du formulaire
+    contactForm.addEventListener("submit", function (e) {
+      
+      // 1. Empêche le rechargement par défaut de la page HTML
+      e.preventDefault();
+
+      // Récupération du bouton d'envoi
+      const btnSubmit = contactForm.querySelector("button[type='submit']");
+      const originalBtnText = btnSubmit ? btnSubmit.innerHTML : "";
+
+      // 2. Change l'état du bouton pendant le chargement
+      if (btnSubmit) {
+        btnSubmit.innerHTML = `<i class="bi bi-arrow-repeat spin"></i> Envoi en cours...`;
+        btnSubmit.disabled = true; // Désactive le bouton pour éviter les clics multiples
+      }
+
+      // 3. Simulation de l'envoi des données (délai de 1.2 seconde)
+      setTimeout(() => {
+        
+        // Affiche le message de confirmation dans la div #form-message
+        if (formMessage) {
+          formMessage.className = "form-message succes";
+          formMessage.innerHTML = `<i class="bi bi-check-circle-fill"></i> Félicitations ! Votre inscription a bien été enregistrée.`;
+          formMessage.style.display = "block";
+          
+          // Fait défiler la page doucement vers le message de succès
+          formMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        // 4. Vide tous les champs du formulaire après envoi
+        contactForm.reset();
+
+        // 5. Rétablit le texte initial du bouton d'envoi
+        if (btnSubmit) {
+          btnSubmit.innerHTML = originalBtnText;
+          btnSubmit.disabled = false;
+        }
+
+      }, 1200); // 1200 millisecondes = 1.2s
+
+    });
+  }
+
+  /* ========================================================
+   GESTION DU DARK MODE COMPLÈTE
+   ======================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  // On cible l'ID exact de ton HTML : "bouton-theme"
+  const themeToggleBtn = document.getElementById("bouton-theme");
+
+  if (themeToggleBtn) {
+    const themeIcon = themeToggleBtn.querySelector("i");
+
+    // 1. Appliquer le thème sauvegardé au chargement
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      if (themeIcon) {
+        themeIcon.className = "bi bi-sun-fill"; // Passe en icône Soleil
+      }
+    }
+
+    // 2. Écouter le clic sur le bouton
+    themeToggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+
+      // Sauvegarde du choix dans le navigateur
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+
+      // Bascule l'icône Lune <-> Soleil
+      if (themeIcon) {
+        themeIcon.className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+      }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnRetourHaut = document.getElementById("bouton-retour-haut");
+
+  if (btnRetourHaut) {
+    // Affiche le bouton dès qu'on descend de 300px
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btnRetourHaut.classList.add("visible");
+      } else {
+        btnRetourHaut.classList.remove("visible");
+      }
+    });
+
+    // Remonte tout en douceur
+    btnRetourHaut.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+});
