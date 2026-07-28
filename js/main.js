@@ -317,3 +317,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section-animee");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Si la section entre dans l'écran
+      if (entry.isIntersecting) {
+        entry.target.classList.add("apparait");
+      }
+    });
+  }, {
+    threshold: 0.15 // Déclenche quand 15% de la section est visible
+  });
+
+  sections.forEach(section => observer.observe(section));
+});

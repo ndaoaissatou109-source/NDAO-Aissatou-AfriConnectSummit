@@ -3059,3 +3059,21 @@ body.dark-mode [class*="filtre"].actif {
   -webkit-text-stroke: 1.5px #050c18; 
   font-weight: 900 !important;
 }
+
+/* =========================================================
+   ANIMATION AU SCROLL (UNIVERSELLE & COMPATIBLE PARTOUT)
+   ========================================================= */
+
+/* État de départ : caché et 40px plus bas */
+.section-animee {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+/* État quand on arrive sur la section : visible et à sa place */
+.section-animee.apparait {
+  opacity: 1;
+  transform: translateY(0);
+}
